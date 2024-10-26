@@ -20,6 +20,7 @@ import MembersSection from "@/components/members";
 import EventBanner from "@/components/event";
 import { Footer } from "@/components/footer";
 import { DonationDialog } from "@/components/donation-dialog";
+import { Section } from "@/components/section";
 
 export default function Home() {
   return (
@@ -87,43 +88,46 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Image Carousel */}
-          <h2 className="text-center text-5xl mb-8 opacity-30 font-bold">
-            The Grand Patrons Of {appConfigs.name}
-          </h2>
-          <Carousel className="w-full">
-            <CarouselContent>
-              {grandPatronsOfTheAssociation.map((patron, index) => (
-                <CarouselItem key={index} className="md:basis-1/2">
-                  <MediaExpander {...patron}>
-                    <Img
-                      src={patron.src}
-                      alt={`Community event image ${index + 1}`}
-                      className="rounded-lg w-full h-[30rem] md:h-[25rem]"
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-
-          {/* Community Impact */}
-
-          <Marquee speed={40} pauseOnHover={true} className="[--duration:40s]">
-            {impacts.concat(impacts).map((impact, index) => (
-              <Button
-                variant="outline"
-                key={index}
-                className="text-gray-600 text-sm m-2 rounded-2xl whitespace-nowrap"
-              >
-                {impact}
-              </Button>
-            ))}
-          </Marquee>
+          <AboutUs />
         </div>
       </section>
 
-      <AboutUs />
+      <Section>
+        {/* Image Carousel */}
+        <h2 className="text-center text-5xl mb-8 opacity-30 font-bold">
+          The Grand Patrons Of {appConfigs.name}
+        </h2>
+        <Carousel className="w-full">
+          <CarouselContent>
+            {grandPatronsOfTheAssociation.map((patron, index) => (
+              <CarouselItem key={index} className="md:basis-1/2">
+                <MediaExpander {...patron}>
+                  <Img
+                    src={patron.src}
+                    alt={`Community event image ${index + 1}`}
+                    className="rounded-lg w-full h-[30rem] md:h-[25rem]"
+                  />
+                </MediaExpander>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
+        {/* Community Impact */}
+
+        <Marquee speed={40} pauseOnHover={true} className="[--duration:40s]">
+          {impacts.concat(impacts).map((impact, index) => (
+            <Button
+              variant="outline"
+              key={index}
+              className="text-gray-600 text-sm m-2 rounded-2xl whitespace-nowrap"
+            >
+              {impact}
+            </Button>
+          ))}
+        </Marquee>
+      </Section>
+
       <MembersSection />
       <EventBanner />
       <Footer />

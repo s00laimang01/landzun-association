@@ -551,7 +551,7 @@ export const members = [
   {
     id: "18",
     name: "Muhammad B. Mustapha",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/mB2dnGH/the-president.jpg",
     position: "President",
     activeFrom: "2016-2024",
     email: "babatifin@gmail.com",
@@ -560,7 +560,7 @@ export const members = [
   {
     id: "19",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/KwKbGHg/baba-alfa-2.jpg",
     position: "1st Vice President",
     activeFrom: "2016-2024",
     email: "babaalfa21@gmail.com",
@@ -596,7 +596,7 @@ export const members = [
   {
     id: "30",
     name: "Gimba Shuaibu",
-    image: "",
+    image: "https://i.ibb.co/L8bQ0hk/fin-sec.jpg",
     position: "Fin. Sec",
     activeFrom: "2016-2024",
     email: "ndaginasirugimba@gmail.com",
@@ -693,7 +693,7 @@ export const members = [
   {
     id: "30",
     name: "Abubakar Muhammad Yakatun",
-    image: "",
+    image: "https://i.ibb.co/JHV1wTW/mohammed-yakatu.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     email: "abubakarmohammedyakatun@gmail.com",
