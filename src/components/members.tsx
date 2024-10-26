@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PhoneIcon, CalendarIcon } from "lucide-react";
+import { PhoneIcon, CalendarIcon, Mail } from "lucide-react";
 import { Section } from "./section";
 import { members } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -74,15 +74,19 @@ export default function MembersSection() {
         <Tabs defaultValue={groupedMembers[4][0]} className="w-full">
           <TabsList className="flex flex-wrap justify-center w-fit mb-6">
             {groupedMembers.map(([year]) => (
-              <TabsTrigger key={year} value={year} className="mb-2 text-sm">
-                {year}
+              <TabsTrigger
+                key={year}
+                value={year}
+                className="text-sm font-bold"
+              >
+                ({year})
               </TabsTrigger>
             ))}
           </TabsList>
           {filteredMembers.map(([year, yearMembers]) => (
             <TabsContent key={year} value={year}>
               <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 mt-4 lg:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 mt-7 lg:grid-cols-3 gap-6"
                 layout
               >
                 <AnimatePresence>
@@ -97,9 +101,9 @@ export default function MembersSection() {
                     >
                       <Card className="overflow-hidden h-full">
                         <CardHeader className="p-0">
-                          <Avatar className="w-full rounded-none h-[200px]">
+                          <Avatar className="w-full rounded-none md:h-[250px] h-[350px]">
                             <AvatarImage
-                              className="rounded-none object-cover"
+                              className="rounded-none object-top"
                               src={
                                 member.image ||
                                 "/placeholder.svg?height=200&width=200"
@@ -124,8 +128,14 @@ export default function MembersSection() {
                           </div>
                           {member.phoneNumber && (
                             <div className="flex items-center text-sm text-gray-500">
-                              <PhoneIcon className="w-4 h-4 mr-2" />
+                              <PhoneIcon className="w-4 h-4 mr-2 text-foreground" />
                               <span>{member.phoneNumber}</span>
+                            </div>
+                          )}
+                          {member.email && (
+                            <div className="flex items-center text-sm text-gray-500 gap-3 mt-1">
+                              <Mail className="w-4 h-4 text-foreground" />
+                              <span>{member.email}</span>
                             </div>
                           )}
                         </CardContent>

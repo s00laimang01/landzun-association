@@ -8,10 +8,7 @@ import { Section } from "./section";
 
 export default function AboutUs() {
   return (
-    <section
-      id="about-us"
-      className="py-2 bg-gradient-to-b from-white to-gray-50"
-    >
+    <section id="about-us" className="py-21">
       <Section>
         <h2 className="text-4xl font-bold text-center mb-8">
           About Our Community

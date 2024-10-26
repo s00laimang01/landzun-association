@@ -5,6 +5,7 @@ import { CalendarDays, MapPin, CheckCircle } from "lucide-react";
 import { Background } from "./dark-backgroud";
 import { Section } from "./section";
 import { Button } from "@/components/ui/button";
+import { appConfigs } from "@/lib/data";
 
 // Custom hook for countdown logic
 const useCountdown = (targetDate: string) => {
@@ -38,14 +39,14 @@ const useCountdown = (targetDate: string) => {
 };
 
 export default function EventBanner() {
-  const eventDate = "2024-10-27T00:00:00";
+  const eventDate = "2024-10-27T11:00:00";
   const timeLeft = useCountdown(eventDate);
   const isEventOver = Object.keys(timeLeft).length === 0;
 
   const eventDetails = {
     title: "Meeting",
     date: "October 27, 2024",
-    location: "Landzun Area",
+    location: `${appConfigs.name} President Resident`,
   };
 
   return (

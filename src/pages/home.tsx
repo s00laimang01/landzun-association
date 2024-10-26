@@ -21,6 +21,7 @@ import EventBanner from "@/components/event";
 import { Footer } from "@/components/footer";
 import { DonationDialog } from "@/components/donation-dialog";
 import { Section } from "@/components/section";
+import { Gallery } from "@/components/gallery";
 
 export default function Home() {
   return (
@@ -129,6 +130,7 @@ export default function Home() {
       </Section>
 
       <MembersSection />
+      <Gallery />
       <EventBanner />
       <Footer />
     </div>

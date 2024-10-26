@@ -560,7 +560,7 @@ export const members = [
   {
     id: "19",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/KwKbGHg/baba-alfa-2.jpg",
+    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
     position: "1st Vice President",
     activeFrom: "2016-2024",
     email: "babaalfa21@gmail.com",
@@ -614,7 +614,8 @@ export const members = [
   {
     id: "30",
     name: "Abubakar Gitsu Muhammad",
-    image: "",
+    image:
+      "https://i.ibb.co/QCcrPJQ/Whats-App-Image-2024-10-26-at-20-10-13-bc3bb96b.jpg",
     position: "Treasurer",
     activeFrom: "2016-2024",
     email: "gitsua@gmail.com",
@@ -667,7 +668,8 @@ export const members = [
   {
     id: "30",
     name: "Prof. M.A.T Suleiman",
-    image: "",
+    image:
+      "https://i.ibb.co/VQWrHpD/Whats-App-Image-2024-10-26-at-20-17-42-530d242b.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     phoneNumber: "08034747754",
@@ -693,7 +695,8 @@ export const members = [
   {
     id: "30",
     name: "Abubakar Muhammad Yakatun",
-    image: "https://i.ibb.co/JHV1wTW/mohammed-yakatu.jpg",
+    image:
+      "https://i.ibb.co/Zh9pWBN/Whats-App-Image-2024-10-26-at-20-19-32-a8b0357b.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     email: "abubakarmohammedyakatun@gmail.com",
