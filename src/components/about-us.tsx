@@ -26,10 +26,9 @@ export default function AboutUs() {
 
           <div>
             <Tabs defaultValue="vision" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-fit grid-cols-3">
                 <TabsTrigger value="mission">Our Mission</TabsTrigger>
                 <TabsTrigger value="vision">Our Vision</TabsTrigger>
-                <TabsTrigger value="values">Our Values</TabsTrigger>
               </TabsList>
               <TabsContent value="mission" className="mt-4">
                 <Card>
@@ -65,20 +64,6 @@ export default function AboutUs() {
                       and wellness through awareness programs, health camps, and
                       support for medical facilities.
                     </p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="values" className="mt-4">
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-semibold mb-2">Our Values</h3>
-                    <ul className="list-disc list-inside text-gray-600">
-                      <li>Inclusivity and Respect</li>
-                      <li>Environmental Stewardship</li>
-                      <li>Lifelong Learning</li>
-                      <li>Civic Engagement</li>
-                      <li>Compassion and Support</li>
-                    </ul>
                   </CardContent>
                 </Card>
               </TabsContent>
