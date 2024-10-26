@@ -72,7 +72,7 @@ export default function MembersSection() {
         </div>
 
         <Tabs defaultValue={groupedMembers[4][0]} className="w-full">
-          <TabsList className="flex justify-center w-fit mb-6">
+          <TabsList className="flex flex-wrap justify-center w-fit mb-6">
             {groupedMembers.map(([year]) => (
               <TabsTrigger key={year} value={year} className="mb-2 text-sm">
                 {year}

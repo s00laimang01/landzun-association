@@ -29,7 +29,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           {/* Navigation */}
           <nav className="flex flex-col md:flex-row justify-between items-center mb-16">
-            <Link to="/" className="text-2xl font-bold mb-4 md:mb-0">
+            <Link
+              to="/"
+              className="text-2xl font-bold text-center mb-4 md:mb-0"
+            >
               {appConfigs.name}
             </Link>
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-4">
