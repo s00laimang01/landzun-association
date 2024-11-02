@@ -36,7 +36,7 @@ export default function MembersSection() {
       yearMembers.filter(
         (member) =>
           member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          member.position.toLowerCase().includes(searchTerm.toLowerCase())
+          member?.position?.toLowerCase().includes(searchTerm.toLowerCase())
       ),
     ]);
     //@ts-ignore
