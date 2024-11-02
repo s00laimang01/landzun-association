@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -16,6 +16,45 @@ export const MediaExpander: FC<{
   name?: string;
   children: ReactNode;
 }> = ({ type = "img", note, src, children, name }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [poster, setPoster] = useState<string | undefined>(undefined);
+  const frameTime = 5; // Choose a specific frame time in seconds
+
+  useEffect(() => {
+    if (type === "vid" && videoRef.current) {
+      const video = videoRef.current;
+
+      const handleLoadedData = () => {
+        video.currentTime = frameTime; // Seek to the desired frame
+      };
+
+      const handleSeeked = () => {
+        if (video.currentTime === frameTime) {
+          const canvas = document.createElement("canvas");
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+
+          const context = canvas.getContext("2d");
+          if (context) {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            setPoster(canvas.toDataURL("image/jpeg")); // Set the captured frame as poster
+          }
+
+          video.currentTime = 0; // Reset the video
+          video.pause();
+        }
+      };
+
+      video.addEventListener("loadeddata", handleLoadedData);
+      video.addEventListener("seeked", handleSeeked);
+
+      return () => {
+        video.removeEventListener("loadeddata", handleLoadedData);
+        video.removeEventListener("seeked", handleSeeked);
+      };
+    }
+  }, [type, src, frameTime]);
+
   return (
     <Dialog>
       <DialogTrigger asChild className="cursor-pointer">
@@ -46,13 +85,19 @@ export const MediaExpander: FC<{
               className="rounded-lg h-[25rem]"
             />
           ) : (
-            <video src={src} autoPlay controls className="w-full rounded-lg" />
+            <video
+              ref={videoRef}
+              src={src}
+              autoPlay
+              controls
+              poster={poster} // Use the captured frame as the poster
+              className="w-full rounded-lg"
+            />
           )}
         </div>
         {note && (
           <DialogDescription className="mt-4 text-sm text-gray-500">
             {note}
-            {/*  */}
           </DialogDescription>
         )}
       </DialogContent>

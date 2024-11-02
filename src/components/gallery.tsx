@@ -36,18 +36,18 @@ const galleries = [
 const UmarSandaVideos = [
   {
     src: Image.UmarSandaVideo,
-    note: `The First Patron Of ${appConfigs.name}, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+    note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
   },
   {
     src: Image.UmarSandaVideo2,
-    note: `The First Patron Of ${appConfigs.name}, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+    note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
   },
 ];
 
 const etsuYahayaVideos = [
   {
     src: Image.EtsuYahayaVideo,
-    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR Talking Drum and Praises`,
+    note: `The Etsu Nupe Talking Drum and Praises`,
   },
   {
     src: Image.EtsuYahayaVideo2,
