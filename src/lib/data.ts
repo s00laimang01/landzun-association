@@ -501,7 +501,7 @@ export const members = [
   },
   {
     id: "30",
-    name: "Alhaji dagi Albdulkadir",
+    name: "Alhaji Ndagi Albdulkadir",
     image: "",
     position: "Social Sec",
     activeFrom: "2006-2016",

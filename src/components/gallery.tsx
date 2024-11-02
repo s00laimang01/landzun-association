@@ -103,8 +103,8 @@ export const Gallery = () => {
 
         <div>
           <h1 className="text-4xl font-bold text-center">
-            The First Patron Of {appConfigs.name}, His Royal Highness, The Late
-            Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR
+            The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr)
+            Umaru Sanda Ndayako CFR
           </h1>
           <div className="flex items-center flex-col gap-4">
             <Carousel
@@ -115,14 +115,7 @@ export const Gallery = () => {
               <CarouselContent className="w-full cursor-pointer">
                 {UmarSandaVideos.map((_, i) => (
                   <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                    <MediaExpander src={_.src} type="vid">
-                      <video
-                        onPlay={() => {}}
-                        src={_.src}
-                        controls={false}
-                        className="h-[25rem] w-full"
-                      />
-                    </MediaExpander>
+                    <MediaExpander src={_.src} type="vid" />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -141,14 +134,7 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {etsuYahayaVideos.map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_.src} type="vid" name={_.note}>
-                    <video
-                      onPlay={() => {}}
-                      src={_.src}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                    />
-                  </MediaExpander>
+                  <MediaExpander src={_.src} type="vid" name={_.note} />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -166,14 +152,7 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.NupeCulture].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid">
-                    <video
-                      onPlay={() => {}}
-                      src={_}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                    />
-                  </MediaExpander>
+                  <MediaExpander src={_} type="vid" />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -191,14 +170,7 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.ArtOfNupe].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid">
-                    <video
-                      onPlay={() => {}}
-                      src={_}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                    />
-                  </MediaExpander>
+                  <MediaExpander src={_} type="vid" />
                 </CarouselItem>
               ))}
             </CarouselContent>

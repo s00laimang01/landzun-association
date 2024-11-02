@@ -59,7 +59,7 @@ export const MediaExpander: FC<{
     <Dialog>
       <DialogTrigger asChild className="cursor-pointer">
         <div className="relative">
-          {children}
+          {children || <Img src={poster || ""} />}
           {Boolean(note || name) && (
             <div className="absolute bg-black bottom-0 right-0 w-full bg-opacity-50 opacity-100 transition-opacity duration-300 h-fit rounded-lg flex flex-col justify-end p-4">
               <DialogTitle className="text-white text-xl font-bold">
