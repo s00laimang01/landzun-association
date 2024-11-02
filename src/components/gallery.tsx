@@ -37,10 +37,14 @@ const UmarSandaVideos = [
   {
     src: Image.UmarSandaVideo,
     note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+    poster:
+      "https://i.ibb.co/nDs55B2/Screenshot-2-11-2024-174742-localhost.jpg",
   },
   {
     src: Image.UmarSandaVideo2,
     note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+    poster:
+      "https://i.ibb.co/Dg3vgmV/Screenshot-2-11-2024-174813-localhost.jpg",
   },
 ];
 
@@ -48,14 +52,20 @@ const etsuYahayaVideos = [
   {
     src: Image.EtsuYahayaVideo,
     note: `The Etsu Nupe Talking Drum and Praises`,
+    poster:
+      "https://i.ibb.co/VxbXR7R/Screenshot-2-11-2024-174922-localhost.jpg",
   },
   {
     src: Image.EtsuYahayaVideo2,
     note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
+    poster:
+      "https://i.ibb.co/s5jfxW8/Screenshot-2-11-2024-174954-localhost.jpg",
   },
   {
     src: Image.EtsuYahayaVideo3,
     note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
+    poster:
+      "https://i.ibb.co/T0DxW8Q/Screenshot-2-11-2024-175017-localhost.jpg",
   },
 ];
 
@@ -115,7 +125,15 @@ export const Gallery = () => {
               <CarouselContent className="w-full cursor-pointer">
                 {UmarSandaVideos.map((_, i) => (
                   <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                    <MediaExpander src={_.src} type="vid"></MediaExpander>
+                    <MediaExpander src={_.src} type="vid">
+                      <video
+                        onPlay={() => {}}
+                        src={_.src}
+                        controls={false}
+                        className="h-[25rem] w-full"
+                        poster={_.poster}
+                      />
+                    </MediaExpander>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -134,11 +152,15 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {etsuYahayaVideos.map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander
-                    src={_.src}
-                    type="vid"
-                    name={_.note}
-                  ></MediaExpander>
+                  <MediaExpander src={_.src} type="vid" name={_.note}>
+                    <video
+                      onPlay={() => {}}
+                      src={_.src}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                      poster={_.poster}
+                    />
+                  </MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -156,7 +178,15 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.NupeCulture].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid"></MediaExpander>
+                  <MediaExpander src={_} type="vid">
+                    <video
+                      onPlay={() => {}}
+                      src={_}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                      poster="https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg"
+                    />
+                  </MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -174,7 +204,15 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.ArtOfNupe].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid"></MediaExpander>
+                  <MediaExpander src={_} type="vid">
+                    <video
+                      onPlay={() => {}}
+                      src={_}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                      poster="https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg"
+                    />
+                  </MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
