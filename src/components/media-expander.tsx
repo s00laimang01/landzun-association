@@ -14,7 +14,7 @@ export const MediaExpander: FC<{
   note?: string;
   src: string;
   name?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }> = ({ type = "img", note, src, children, name }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [poster, setPoster] = useState<string | undefined>(undefined);

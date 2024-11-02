@@ -115,7 +115,7 @@ export const Gallery = () => {
               <CarouselContent className="w-full cursor-pointer">
                 {UmarSandaVideos.map((_, i) => (
                   <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                    <MediaExpander src={_.src} type="vid" />
+                    <MediaExpander src={_.src} type="vid"></MediaExpander>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -134,7 +134,11 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {etsuYahayaVideos.map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_.src} type="vid" name={_.note} />
+                  <MediaExpander
+                    src={_.src}
+                    type="vid"
+                    name={_.note}
+                  ></MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -152,7 +156,7 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.NupeCulture].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid" />
+                  <MediaExpander src={_} type="vid"></MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -170,7 +174,7 @@ export const Gallery = () => {
             <CarouselContent className="w-full cursor-pointer">
               {[Image.ArtOfNupe].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid" />
+                  <MediaExpander src={_} type="vid"></MediaExpander>
                 </CarouselItem>
               ))}
             </CarouselContent>
