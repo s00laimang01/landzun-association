@@ -33,6 +33,32 @@ const galleries = [
   { src: Image.ImageEighteen, type: "img" },
 ];
 
+const UmarSandaVideos = [
+  {
+    src: Image.UmarSandaVideo,
+    note: `The First Patron Of ${appConfigs.name}, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+  },
+  {
+    src: Image.UmarSandaVideo2,
+    note: `The First Patron Of ${appConfigs.name}, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
+  },
+];
+
+const etsuYahayaVideos = [
+  {
+    src: Image.EtsuYahayaVideo,
+    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR Talking Drum and Praises`,
+  },
+  {
+    src: Image.EtsuYahayaVideo2,
+    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
+  },
+  {
+    src: Image.EtsuYahayaVideo3,
+    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
+  },
+];
+
 export const Gallery = () => {
   return (
     <Section className="flex flex-col gap-4">
@@ -45,32 +71,140 @@ export const Gallery = () => {
         preserving traditions and fostering community spirit.
       </Text>
       <br />
-      <Text className="font-semibold">
-        Memories from the 40th Anniversary,General Meeting and Award of
-        Certificate of Service to the Executives held at CABS, Niger State
-        Polytechnic Bida, on Saturday, June 29th, 2024
-      </Text>
-      <Carousel
-        className="w-full"
-        opts={{ loop: true }}
-        plugins={[Autoplay({ delay: 5000 })]}
-      >
-        <CarouselContent className="w-full cursor-pointer">
-          {galleries.map((_, i) => (
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
-              <MediaExpander src={_.src} type={_.type as "img"}>
-                <Img
-                  src={_.src}
-                  alt={`Image-${i}`}
-                  className="h-[25rem] w-full"
-                />
-              </MediaExpander>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-0 -ml-2" />
-        <CarouselNext className="right-0 mr-0" />
-      </Carousel>
+      <div className="flex flex-col gap-5">
+        <div>
+          <Text className="font-semibold">
+            Memories from the 40th Anniversary,General Meeting and Award of
+            Certificate of Service to the Executives held at CABS, Niger State
+            Polytechnic Bida, on Saturday, June 29th, 2024
+          </Text>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {galleries.map((_, i) => (
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
+                  <MediaExpander src={_.src} type={_.type as "img"}>
+                    <Img
+                      src={_.src}
+                      alt={`Image-${i}`}
+                      className="h-[25rem] w-full"
+                    />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -ml-2" />
+            <CarouselNext className="right-0 mr-0" />
+          </Carousel>
+        </div>
+
+        <div>
+          <h1 className="text-4xl font-bold text-center">
+            The First Patron Of {appConfigs.name}, His Royal Highness, The Late
+            Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR
+          </h1>
+          <div className="flex items-center flex-col gap-4">
+            <Carousel
+              className="w-full"
+              opts={{ loop: true }}
+              plugins={[Autoplay({ delay: 5000 })]}
+            >
+              <CarouselContent className="w-full cursor-pointer">
+                {UmarSandaVideos.map((_, i) => (
+                  <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
+                    <MediaExpander src={_.src} type="vid">
+                      <video
+                        onPlay={() => {}}
+                        src={_.src}
+                        controls={false}
+                        className="h-[25rem] w-full"
+                      />
+                    </MediaExpander>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center">
+            His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR
+          </h1>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {etsuYahayaVideos.map((_, i) => (
+                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
+                  <MediaExpander src={_.src} type="vid" name={_.note}>
+                    <video
+                      onPlay={() => {}}
+                      src={_.src}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                    />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center">
+            The Cultural Display Of Nupe People
+          </h1>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {[Image.NupeCulture].map((_, i) => (
+                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
+                  <MediaExpander src={_} type="vid">
+                    <video
+                      onPlay={() => {}}
+                      src={_}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                    />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center">
+            The Art And Tradition Of Nupe People
+          </h1>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {[Image.ArtOfNupe].map((_, i) => (
+                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
+                  <MediaExpander src={_} type="vid">
+                    <video
+                      onPlay={() => {}}
+                      src={_}
+                      controls={false}
+                      className="h-[25rem] w-full"
+                    />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
     </Section>
   );
 };

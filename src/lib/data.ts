@@ -147,9 +147,10 @@ export const members = [
   {
     id: "14",
     name: "Abdulkadir Yamma",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/XtPzmbR/yanda.jpg",
     position: "Asst Fin Sec",
     activeFrom: "1982-1986",
+    email: "abusyaventuresltd@gmail.com",
     phoneNumber: "123-456-7890",
   },
   {
@@ -221,10 +222,9 @@ export const members = [
   },
   {
     id: "30",
-    name: "Abdulkadir Yamma",
-    image: "",
-    position: "Asst Fin. Sec",
+    name: "Abdulkadir Yahttps://i.ibb.co/XtPzmbR/yanda.jpgFin. Sec",
     activeFrom: "1986-1990",
+    email: "abusyaventuresltd@gmail.com",
     //phoneNumber: "",
   },
   {
@@ -458,9 +458,10 @@ export const members = [
   {
     id: "20",
     name: "Abdulkadir Yamma",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/XtPzmbR/yanda.jpg",
     position: "Asst. Sec Gen",
     activeFrom: "2006-2016",
+    email: "abusyaventuresltd@gmail.com",
   },
   {
     id: "30",
@@ -579,10 +580,10 @@ export const members = [
   {
     id: "20",
     name: "Abdulkadir Yamma",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/XtPzmbR/yanda.jpg",
     position: "Sec Gen",
     activeFrom: "2016-2024",
-    email: "",
+    email: "abusyaventuresltd@gmail.com",
     phoneNumber: "08036517581",
   },
   {

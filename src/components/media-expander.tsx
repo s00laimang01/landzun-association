@@ -46,7 +46,7 @@ export const MediaExpander: FC<{
               className="rounded-lg h-[25rem]"
             />
           ) : (
-            <video src={src} controls className="w-full rounded-lg" />
+            <video src={src} autoPlay controls className="w-full rounded-lg" />
           )}
         </div>
         {note && (

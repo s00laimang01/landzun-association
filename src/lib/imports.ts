@@ -18,6 +18,13 @@ import ImageEighteen from "../assets/ImageEighteen.jpg";
 import EmirImage from "../assets/grand-patrons-of-landzun-dev-one.jpg";
 import FormarEmirImage from "../assets/grand-patrons-of-landzun-dev-two.jpg";
 import LanzdunDevLogo from "../assets/LandzunDevLogo.jpg";
+import UmarSandaVideo from "../assets/umar-sanda-video.mp4";
+import UmarSandaVideo2 from "../assets/umar-sanda-video2.mp4";
+import EtsuYahayaVideo from "../assets/etsu-yahaya-video.mp4";
+import EtsuYahayaVideo2 from "../assets/etsu-yahaya-video2.mp4";
+import EtsuYahayaVideo3 from "../assets/etsu-yahaya-video3.mp4";
+import NupeCulture from "../assets/nupe-culture.mp4";
+import ArtOfNupe from "../assets/artofnupe.mp4";
 
 export default {
   ImageOne,
@@ -40,4 +47,11 @@ export default {
   EmirImage,
   FormarEmirImage,
   LanzdunDevLogo,
+  UmarSandaVideo,
+  UmarSandaVideo2,
+  EtsuYahayaVideo,
+  EtsuYahayaVideo2,
+  EtsuYahayaVideo3,
+  NupeCulture,
+  ArtOfNupe,
 };
