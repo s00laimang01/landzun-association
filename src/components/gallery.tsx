@@ -112,7 +112,7 @@ export const Gallery = () => {
         </div>
 
         <div>
-          <h1 className="text-4xl font-bold text-center">
+          <h1 className="text-2xl font-bold text-center">
             The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr)
             Umaru Sanda Ndayako CFR
           </h1>
@@ -141,7 +141,7 @@ export const Gallery = () => {
           </div>
         </div>
         <div>
-          <h1 className="text-4xl font-bold text-center">
+          <h1 className="text-2xl font-bold text-center">
             His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR
           </h1>
           <Carousel
