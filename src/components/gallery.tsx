@@ -38,13 +38,13 @@ const UmarSandaVideos = [
     src: Image.UmarSandaVideo,
     note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
     poster:
-      "https://i.ibb.co/nDs55B2/Screenshot-2-11-2024-174742-localhost.jpg",
+      "https://i.ibb.co/Dg3vgmV/Screenshot-2-11-2024-174813-localhost.jpg",
   },
   {
     src: Image.UmarSandaVideo2,
     note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
     poster:
-      "https://i.ibb.co/Dg3vgmV/Screenshot-2-11-2024-174813-localhost.jpg",
+      "https://i.ibb.co/nDs55B2/Screenshot-2-11-2024-174742-localhost.jpg",
   },
 ];
 
@@ -120,7 +120,7 @@ export const Gallery = () => {
             <Carousel
               className="w-full"
               opts={{ loop: true }}
-              plugins={[Autoplay({ delay: 5000 })]}
+              plugins={[Autoplay({ delay: 2000 })]}
             >
               <CarouselContent className="w-full cursor-pointer">
                 {UmarSandaVideos.map((_, i) => (
@@ -142,12 +142,13 @@ export const Gallery = () => {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-center">
-            His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR
+            The Second Patron, His Royal Highness, The Etsu Nupe Alh. (Dr)
+            Yahaya Abubakar CFR
           </h1>
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
+            plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
               {etsuYahayaVideos.map((_, i) => (
@@ -173,7 +174,7 @@ export const Gallery = () => {
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
+            plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
               {[Image.NupeCulture].map((_, i) => (
@@ -199,7 +200,7 @@ export const Gallery = () => {
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
+            plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
               {[Image.ArtOfNupe].map((_, i) => (
