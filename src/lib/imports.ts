@@ -25,6 +25,12 @@ import EtsuYahayaVideo2 from "../assets/etsu-yahaya-video2.mp4";
 import EtsuYahayaVideo3 from "../assets/etsu-yahaya-video3.mp4";
 import NupeCulture from "../assets/nupe-culture.mp4";
 import ArtOfNupe from "../assets/artofnupe.mp4";
+import ArtOfNupe2 from "../assets/art-and-tradition-2.mp4";
+import Masaga from "../assets/masaga.mp4";
+import NupeGirlDancing from "../assets/nupe-girl-d.mp4";
+import NupeGirlDancing2 from "../assets/nupe-girl-d21.mp4";
+import NupeHistory from "../assets/nupe-history.mp4";
+import BeautifulNupeGirl from "../assets/b-nupe-girl.mp4";
 
 export default {
   ImageOne,
@@ -54,4 +60,10 @@ export default {
   EtsuYahayaVideo3,
   NupeCulture,
   ArtOfNupe,
+  ArtOfNupe2,
+  Masaga,
+  NupeGirlDancing,
+  NupeGirlDancing2,
+  BeautifulNupeGirl,
+  NupeHistory,
 };

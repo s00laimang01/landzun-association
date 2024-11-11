@@ -14,7 +14,7 @@ export default function AboutUs() {
           About Our Community
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <Img
               src={Images.LanzdunDevLogo}
@@ -25,10 +25,11 @@ export default function AboutUs() {
           </div>
 
           <div>
-            <Tabs defaultValue="vision" className="w-full">
+            <Tabs defaultValue="profile" className="w-full">
               <TabsList className="grid w-fit grid-cols-3">
                 <TabsTrigger value="mission">Our Mission</TabsTrigger>
                 <TabsTrigger value="vision">Our Vision</TabsTrigger>
+                <TabsTrigger value="profile">Our Profile</TabsTrigger>
               </TabsList>
               <TabsContent value="mission" className="mt-4">
                 <Card>
@@ -63,6 +64,53 @@ export default function AboutUs() {
                       and young professionals. Additionally, we promote health
                       and wellness through awareness programs, health camps, and
                       support for medical facilities.
+                    </p>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              <TabsContent value="profile" className="mt-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="text-2xl font-semibold mb-2">Our Profile</h3>
+                    <p className="text-gray-600">
+                      Draft PROFILE OF LANDZUN DEVELOPMENT ASSOCIATION (LADA)
+                      1.0 LANDZUN DEVELOPMENT ASSOCIATION is a Non-Governmental
+                      Organization formed by the indigenes of Bida Town and
+                      those who have the interest of the town at heart with the
+                      following purposes: 1. To promote social, cultural, and
+                      economic integration among its members, the Bida
+                      community, and the Nigerian society in general. 2. To
+                      foster unity and understanding amongst the members, Bida
+                      community, and other communities in the state and the
+                      country at large. 3. To undertake self-help projects. The
+                      association was launched on 21st August 1982. It has not
+                      less than fourteen members that serve as National
+                      Executive Committee members. The Narional Executive
+                      Committee members undertake the day-to-day running of the
+                      activities of the Association. The NEC members are
+                      normally elected by the members at the convention/ general
+                      assembly of the Association. The President or his deputy
+                      chairs the meetings of the National Executive Committee.
+                      The Association has a Board of Trustee. The Board of
+                      Trustee members are registered with the Corporate Affairs
+                      Commission. His Royal Highness, the Etsu Nupe, is the
+                      Grand Patron of the Association. 2.0 SOME ACTIVITIES
+                      UNDERTAKEN BY THE ASSOCIATION 1. The Association
+                      constructed and equipped a health clinic at Bangaie ward,
+                      Bida. 2. Supply of food provision to patients admitted at
+                      Bida FMC/General Hospital. 3. Appealed to various
+                      governments in the provision of development projects for
+                      the town and its environs. 4. Embarked on social
+                      activities such as radio and television advocacy and
+                      sensitization on National programmes (commonly census and
+                      general election issues) and social ills within the
+                      community. 5. The Association has in place a functional
+                      registered Cooperative Society. 3.0 ADDRESS The
+                      Association has already secured a permanent site, along
+                      Bangaie Road, Bida to be developed as its National
+                      Secretariat and Headquarters. In the interim, the
+                      Association Headquarters is located at Banma, Kota Woro,
+                      Bida, Niger State.
                     </p>
                   </CardContent>
                 </Card>

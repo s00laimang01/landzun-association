@@ -177,15 +177,41 @@ export const Gallery = () => {
             plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
-              {[Image.NupeCulture].map((_, i) => (
+              {[
+                Image.NupeCulture,
+                Image.NupeGirlDancing,
+                Image.NupeGirlDancing2,
+                Image.NupeHistory,
+                Image.BeautifulNupeGirl,
+              ].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid">
+                  <MediaExpander
+                    name={
+                      [
+                        "",
+                        "",
+                        "",
+                        "A brief origin of Nupe People",
+                        "A Typical Nupe Girl Cultural Dressing",
+                      ][i]
+                    }
+                    src={_}
+                    type="vid"
+                  >
                     <video
                       onPlay={() => {}}
                       src={_}
                       controls={false}
                       className="h-[25rem] w-full"
-                      poster="https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg"
+                      poster={
+                        [
+                          "https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg",
+                          "https://i.ibb.co/BZSQjs2/Screenshot-11-11-2024-7526-localhost.jpg",
+                          "",
+                          "",
+                          "",
+                        ][i]
+                      }
                     />
                   </MediaExpander>
                 </CarouselItem>
@@ -203,7 +229,7 @@ export const Gallery = () => {
             plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
-              {[Image.ArtOfNupe].map((_, i) => (
+              {[Image.ArtOfNupe, Image.ArtOfNupe2, Image.Masaga].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
                   <MediaExpander src={_} type="vid">
                     <video
@@ -211,7 +237,12 @@ export const Gallery = () => {
                       src={_}
                       controls={false}
                       className="h-[25rem] w-full"
-                      poster="https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg"
+                      poster={
+                        [
+                          "https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg",
+                          "https://i.ibb.co/GRSDpDN/Screenshot-11-11-2024-74242-localhost.jpg",
+                        ][i]
+                      }
                     />
                   </MediaExpander>
                 </CarouselItem>

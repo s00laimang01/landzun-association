@@ -172,7 +172,7 @@ export const members = [
   {
     id: "17",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/xHL5yd7/baba-alfa-3.jpg",
     position: "Ex Official",
     activeFrom: "1982-1986",
   },
@@ -265,7 +265,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/xHL5yd7/baba-alfa-3.jpg",
     position: "P.R.O",
     activeFrom: "1986-1990",
   },
@@ -351,7 +351,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/xHL5yd7/baba-alfa-3.jpg",
     position: "Treasurer",
     activeFrom: "1990-2006",
   },
@@ -451,7 +451,7 @@ export const members = [
   {
     id: "20",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/xHL5yd7/baba-alfa-3.jpg",
     position: "Sec Gen",
     activeFrom: "2006-2016",
   },
@@ -562,7 +562,7 @@ export const members = [
   {
     id: "19",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/vx5Cb91/baba-alfa.jpg",
+    image: "https://i.ibb.co/xHL5yd7/baba-alfa-3.jpg",
     position: "1st Vice President",
     activeFrom: "2016-2024",
     email: "babaalfa21@gmail.com",
