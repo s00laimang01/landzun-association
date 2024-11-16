@@ -5,6 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Images from "@/lib/imports";
 import { appConfigs } from "@/lib/data";
 import { Section } from "./section";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { MediaExpander } from "./media-expander";
 
 export default function AboutUs() {
   return (
@@ -119,6 +122,19 @@ export default function AboutUs() {
           </div>
         </div>
 
+        <div className="w-full flex flex-col items-center justify-center mt-6 space-y-3">
+          <h2 className="text-center font-bold text-2xl">
+            This is part of Landzun River that passes across Bida town and from
+            where the association got it's name.
+          </h2>
+          <div className="md:max-w-5xl m-auto w-full md:j">
+            <Img
+              src={Images.LandzunRiver}
+              className="rounded-md w-full md:h-[40rem]"
+            />
+          </div>
+        </div>
+
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">What We Do</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,6 +168,35 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
+
+        <Carousel
+          className="w-full mt-10"
+          opts={{ loop: true }}
+          plugins={[Autoplay({ delay: 2000 })]}
+        >
+          <CarouselContent className="w-full cursor-pointer">
+            {[Images.Clinic, Images.Land].map((_, i) => (
+              <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
+                <MediaExpander
+                  src={_}
+                  type="img"
+                  name={
+                    [
+                      "SELF-HELP PROJECT:      THE CLINIC BUILT AND EQUIPPED BY LANDZUN  DEVELOPMENT ASSOCIATION AT BANGAIE, BIDA IN 1983.",
+                      "Proposed site of National       Secretariat of LANDZUN DEVELOPMENT ASSOCIATION, BIDA.".toUpperCase(),
+                    ][i]
+                  }
+                >
+                  <Img
+                    src={_}
+                    alt={`Image-${i}`}
+                    className="h-[25rem] w-full rounded-lg"
+                  />
+                </MediaExpander>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
 
         <div className="text-center mt-12">
           <Button size="lg" className="rounded-full">

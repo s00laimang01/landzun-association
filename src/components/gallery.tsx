@@ -229,9 +229,26 @@ export const Gallery = () => {
             plugins={[Autoplay({ delay: 2000 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
-              {[Image.ArtOfNupe, Image.ArtOfNupe2, Image.Masaga].map((_, i) => (
+              {[
+                Image.ArtOfNupe,
+                Image.ArtOfNupe2,
+                Image.Masaga,
+                Image.SallahPrayer,
+                Image.SpecialReport,
+              ].map((_, i) => (
                 <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_} type="vid">
+                  <MediaExpander
+                    name={
+                      [
+                        "",
+                        "",
+                        "",
+                        "Sallah prayers during sallah day at idi praying ground in Bida.",
+                      ][i]
+                    }
+                    src={_}
+                    type="vid"
+                  >
                     <video
                       onPlay={() => {}}
                       src={_}
@@ -241,6 +258,9 @@ export const Gallery = () => {
                         [
                           "https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg",
                           "https://i.ibb.co/GRSDpDN/Screenshot-11-11-2024-74242-localhost.jpg",
+                          "",
+                          "",
+                          "",
                         ][i]
                       }
                     />

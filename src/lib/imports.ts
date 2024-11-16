@@ -31,6 +31,11 @@ import NupeGirlDancing from "../assets/nupe-girl-d.mp4";
 import NupeGirlDancing2 from "../assets/nupe-girl-d21.mp4";
 import NupeHistory from "../assets/nupe-history.mp4";
 import BeautifulNupeGirl from "../assets/b-nupe-girl.mp4";
+import SallahPrayer from "../assets/sallah-prayers.mp4";
+import SpecialReport from "../assets/special-report.mp4";
+import Clinic from "../assets/lada-clinic.jpg";
+import Land from "../assets/lada-land.jpg";
+import LandzunRiver from "../assets/landzun-river.jpg";
 
 export default {
   ImageOne,
@@ -66,4 +71,9 @@ export default {
   NupeGirlDancing2,
   BeautifulNupeGirl,
   NupeHistory,
+  SallahPrayer,
+  SpecialReport,
+  Land,
+  Clinic,
+  LandzunRiver,
 };
