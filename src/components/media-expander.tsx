@@ -36,7 +36,9 @@ export const MediaExpander: FC<{
         </div>
       </DialogTrigger>
       <DialogContent className="w-[90%] md:max-w-2xl md:h-[95%] overflow-auto">
-        <DialogHeader>{name && <DialogTitle>{name}</DialogTitle>}</DialogHeader>
+        <DialogHeader>
+          {name && <DialogTitle className="text-lg">{name}</DialogTitle>}
+        </DialogHeader>
         <div className="mt-4">
           {type === "img" ? (
             <Img
