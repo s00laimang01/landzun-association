@@ -23,7 +23,7 @@ export const MediaExpander: FC<{
           {children}
           {Boolean(note || name) && (
             <div className="absolute bg-black bottom-0 right-0 w-full bg-opacity-50 opacity-100 transition-opacity duration-300 h-fit rounded-lg flex flex-col justify-end p-4">
-              <DialogTitle className="text-white text-xl font-bold">
+              <DialogTitle className="text-white text-base font-bold line-clamp-2">
                 {name}
               </DialogTitle>
               {note && (
@@ -37,7 +37,7 @@ export const MediaExpander: FC<{
       </DialogTrigger>
       <DialogContent className="w-[90%] md:max-w-2xl md:h-[95%] overflow-auto">
         <DialogHeader>
-          {name && <DialogTitle className="text-[15px]">{name}</DialogTitle>}
+          {name && <DialogTitle className="text-sm">{name}</DialogTitle>}
         </DialogHeader>
         <div className="mt-4">
           {type === "img" ? (
