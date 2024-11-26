@@ -309,7 +309,7 @@ export const members = [
   {
     id: "19",
     name: "Bako Bawa",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/HgK0DD9/bako-bawa.jpg",
     position: "1st Vice President",
     activeFrom: "1990-2006",
   },
@@ -530,7 +530,7 @@ export const members = [
   {
     id: "30",
     name: "Bako M. Bawa",
-    image: "",
+    image: "https://i.ibb.co/HgK0DD9/bako-bawa.jpg",
     position: "Ex Official",
     activeFrom: "2006-2016",
   },
@@ -589,7 +589,7 @@ export const members = [
   {
     id: "20",
     name: "Umar A. Dzukogi",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/ScTPftf/ass-sec-gen.jpg",
     position: "Asst. Sec Gen",
     activeFrom: "2016-2024",
     email: "umardzukogi@yahoo.com",
@@ -626,7 +626,7 @@ export const members = [
   {
     id: "30",
     name: "Aliyu Macin",
-    image: "",
+    image: "https://i.ibb.co/n3KFydz/ass-treasurer.jpg",
     position: "Asst. Treasurer",
     activeFrom: "2016-2024",
     email: "",
@@ -679,7 +679,7 @@ export const members = [
   {
     id: "30",
     name: "Bako Muhammad Bawa",
-    image: "",
+    image: "https://i.ibb.co/HgK0DD9/bako-bawa.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     email: "bakobawa@gmail.com",
