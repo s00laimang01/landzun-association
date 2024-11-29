@@ -222,9 +222,11 @@ export const members = [
   },
   {
     id: "30",
-    name: "Abdulkadir Yahttps://i.ibb.co/XtPzmbR/yanda.jpgFin. Sec",
+    name: "Abdulkadir Yamma",
+    position: "Fin. Sec",
     activeFrom: "1986-1990",
     email: "abusyaventuresltd@gmail.com",
+    image: "https://i.ibb.co/XtPzmbR/yanda.jpg",
     //phoneNumber: "",
   },
   {
@@ -379,9 +381,10 @@ export const members = [
   {
     id: "30",
     name: "Musa B. Abdul",
-    image: "",
+    image: "https://i.ibb.co/QYrpHMZ/musa-abdul.jpg",
     position: "Legal Adviser",
     activeFrom: "1990-2006",
+    phoneNumber: "08034549217",
   },
   {
     id: "30",
@@ -509,9 +512,10 @@ export const members = [
   {
     id: "30",
     name: "Muhammad Liman",
-    image: "",
+    image: "https://i.ibb.co/314kC50/mohm-liman.jpg",
     position: "Legal Adviser",
     activeFrom: "2006-2016",
+    phoneNumber: "08033360105",
   },
   {
     id: "30",
@@ -526,6 +530,7 @@ export const members = [
     image: "",
     position: "Ex Official",
     activeFrom: "2006-2016",
+    phoneNumber: "",
   },
   {
     id: "30",
@@ -544,7 +549,7 @@ export const members = [
   {
     id: "30",
     name: "Mohammed T. Salihu",
-    image: "",
+    image: "https://i.ibb.co/NFJ153M/2nd-vice-president.jpg",
     position: "Ex Official",
     activeFrom: "2006-2016",
   },
@@ -571,7 +576,7 @@ export const members = [
   {
     id: "20",
     name: "Justice M.T Salihu (RTD)",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/NFJ153M/2nd-vice-president.jpg",
     position: "2nd Vice President",
     activeFrom: "2016-2024",
     email: "tankosalihu8@gmail.com",
@@ -644,7 +649,7 @@ export const members = [
   {
     id: "30",
     name: "Alhaji Sani Muhammad",
-    image: "",
+    image: "https://i.ibb.co/W3hp5mY/mohd-sani.jpg",
     position: "Social Sec",
     activeFrom: "2016-2024",
     email: "",
