@@ -118,9 +118,10 @@ export const members = [
   {
     id: "10",
     name: "Lakpene Yusuf",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/stmHFgh/lapkene.jpg",
     position: "Legal Advisor",
     activeFrom: "1982-1986",
+    phoneNumber: "08036412969",
   },
   {
     id: "11",
@@ -209,9 +210,10 @@ export const members = [
   {
     id: "20",
     name: "Usman B Muhammad",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/FzCmN6w/usman-baba.jpg",
     position: "Asst. Sec Gen",
     activeFrom: "1986-1990",
+    phoneNumber: "08076270009",
   },
   {
     id: "30",
@@ -260,9 +262,10 @@ export const members = [
   {
     id: "30",
     name: "Lakpene Yusuf",
-    image: "",
+    image: "https://i.ibb.co/stmHFgh/lapkene.jpg",
     position: "Legal Adviser",
     activeFrom: "1986-1990",
+    phoneNumber: "08036412969",
   },
   {
     id: "30",
@@ -339,9 +342,10 @@ export const members = [
   {
     id: "30",
     name: "Usman B. Muhammad",
-    image: "",
+    image: "https://i.ibb.co/FzCmN6w/usman-baba.jpg",
     position: "Fin. Sec",
     activeFrom: "1990-2006",
+    phoneNumber: "https://i.ibb.co/FzCmN6w/usman-baba.jpg",
   },
   {
     id: "30",
@@ -374,9 +378,10 @@ export const members = [
   {
     id: "30",
     name: "Usman Mohammad Alkali",
-    image: "",
+    image: "https://i.ibb.co/FzCmN6w/usman-baba.jpg",
     position: "Social Sec",
     activeFrom: "1990-2006",
+    phoneNumber: "08076270009",
   },
   {
     id: "30",
@@ -483,9 +488,10 @@ export const members = [
   {
     id: "30",
     name: "Mohammed Sani",
-    image: "",
+    image: "https://i.ibb.co/W3hp5mY/mohd-sani.jpg",
     position: "Treasurer",
     activeFrom: "2006-2016",
+    phoneNumber: "08038456211",
   },
   {
     id: "30",
@@ -497,10 +503,11 @@ export const members = [
   },
   {
     id: "30",
-    name: "Kasim N. Yawa",
-    image: "",
+    name: "Kasim N. Yewa",
+    image: "https://i.ibb.co/C2V41SG/kashim.jpg",
     position: "Sec. Special Duties",
     activeFrom: "2006-2016",
+    phoneNumber: "08063174353",
   },
   {
     id: "30",
@@ -639,8 +646,8 @@ export const members = [
   },
   {
     id: "30",
-    name: "Muhammadu Baba Usman",
-    image: "",
+    name: "Muhammadu Baba ",
+    image: "https://i.ibb.co/FzCmN6w/usman-baba.jpg",
     position: "Sec. Special Duties",
     activeFrom: "2016-2024",
     email: "",
