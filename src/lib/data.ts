@@ -132,8 +132,8 @@ export const members = [
   },
   {
     id: "12",
-    name: "Ishaq Ndaji",
-    image: "/placeholder.svg?height=200&width=200",
+    name: "Ishaqi Ndaji",
+    image: "https://i.ibb.co/Lg265mj/ishaku.jpg",
     position: "Asst P.R.O",
     activeFrom: "1982-1986",
   },
@@ -225,7 +225,7 @@ export const members = [
   {
     id: "30",
     name: "Abdulkadir Yamma",
-    position: "Fin. Sec",
+    position: "Asst. Fin. Sec",
     activeFrom: "1986-1990",
     email: "abusyaventuresltd@gmail.com",
     image: "https://i.ibb.co/XtPzmbR/yanda.jpg",
@@ -255,7 +255,7 @@ export const members = [
   {
     id: "30",
     name: "Mustapha Ndanusa",
-    image: "",
+    image: "https://i.ibb.co/865LjKM/ya-man2.jpg",
     position: "Social Sec",
     activeFrom: "1986-1990",
   },
@@ -371,7 +371,7 @@ export const members = [
   {
     id: "30",
     name: "Yahaya Mustapha",
-    image: "",
+    image: "https://i.ibb.co/yYYSY50/yahaya-mustapha.jpg",
     position: "Sec. Special Duties",
     activeFrom: "1990-2006",
   },
@@ -393,8 +393,9 @@ export const members = [
   },
   {
     id: "30",
-    name: "Muhammad Yakatun Abubakar",
-    image: "",
+    name: "Muhammad yakatun Abubakar",
+    image:
+      "https://i.ibb.co/Zh9pWBN/Whats-App-Image-2024-10-26-at-20-19-32-a8b0357b.jpg",
     position: "P.R.O",
     activeFrom: "1990-2006",
   },
@@ -481,7 +482,7 @@ export const members = [
   {
     id: "30",
     name: "Mustapha J. Yahaya",
-    image: "",
+    image: "https://i.ibb.co/61ZRcp6/mustapha-j.jpg",
     position: "Asst Fin. Sec",
     activeFrom: "2006-2016",
   },
@@ -526,15 +527,17 @@ export const members = [
   },
   {
     id: "30",
-    name: "Abubakar M. Yakatun",
-    image: "",
+    name: "Abubakar M. yakatun",
+    image:
+      "https://i.ibb.co/Zh9pWBN/Whats-App-Image-2024-10-26-at-20-19-32-a8b0357b.jpg",
     position: "P.R.O",
     activeFrom: "2006-2016",
   },
   {
     id: "30",
     name: "Abubakar Tanko Suleiman",
-    image: "",
+    image:
+      "https://i.ibb.co/VQWrHpD/Whats-App-Image-2024-10-26-at-20-17-42-530d242b.jpg",
     position: "Ex Official",
     activeFrom: "2006-2016",
     phoneNumber: "",
@@ -708,7 +711,7 @@ export const members = [
   },
   {
     id: "30",
-    name: "Abubakar Muhammad Yakatun",
+    name: "Abubakar Muhammad yakatun",
     image:
       "https://i.ibb.co/Zh9pWBN/Whats-App-Image-2024-10-26-at-20-19-32-a8b0357b.jpg",
     position: "Ex Official",
