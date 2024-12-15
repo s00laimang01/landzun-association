@@ -56,6 +56,12 @@ const etsuYahayaVideos = [
       "https://i.ibb.co/VxbXR7R/Screenshot-2-11-2024-174922-localhost.jpg",
   },
   {
+    src: "https://i.ibb.co/3YZcs8r/etsu-nupe-installation.jpg",
+    note: `The Installation ceremony of HRH Alhaji Yahaya Abubakar CFR as the 13th Etsu Nupe in Bida Niger state on 21st Sept. 2003.`,
+    poster: "",
+    type: "img",
+  },
+  {
     src: Image.EtsuYahayaVideo2,
     note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
     poster:
@@ -66,6 +72,11 @@ const etsuYahayaVideos = [
     note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
     poster:
       "https://i.ibb.co/T0DxW8Q/Screenshot-2-11-2024-175017-localhost.jpg",
+  },
+  {
+    src: Image.SingingPraise,
+    note: `The praise singing singing of his royal highness Etsu Nupe Alhaji Dr. Yahaya Abubakar CGFR.`,
+    poster: "",
   },
 ];
 

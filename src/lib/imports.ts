@@ -35,6 +35,7 @@ import SallahPrayer from "../assets/sallah-prayers.mp4";
 import SpecialReport from "../assets/special-report.mp4";
 import Clinic from "../assets/lada-clinic.jpg";
 import Land from "../assets/lada-land.jpg";
+import SingingPraise from "../assets/singing-praise.mp4";
 import LandzunRiver from "../assets/landzun-river.jpg";
 
 export default {
@@ -76,4 +77,5 @@ export default {
   Land,
   Clinic,
   LandzunRiver,
+  SingingPraise,
 };

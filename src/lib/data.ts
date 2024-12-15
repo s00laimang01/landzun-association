@@ -97,7 +97,7 @@ export const members = [
   {
     id: "7",
     name: "Mall Sulayman Y. Muhammad",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/T8dfsVc/sulyman-y.jpg",
     position: "Asst Treasurer",
     activeFrom: "1982-1986",
   },
@@ -132,7 +132,7 @@ export const members = [
   },
   {
     id: "12",
-    name: "Ishaqi Ndaji",
+    name: "Ishaqu Ndagi",
     image: "https://i.ibb.co/Lg265mj/ishaku.jpg",
     position: "Asst P.R.O",
     activeFrom: "1982-1986",
@@ -157,7 +157,7 @@ export const members = [
   {
     id: "15",
     name: "Abdullahi N. Aliyu",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/3MfdHLY/ndagii.jpg",
     position: "Ex Official",
     activeFrom: "1982-1986",
     phoneNumber: "123-456-7890",
@@ -182,14 +182,15 @@ export const members = [
   {
     id: "18",
     name: "Abdullahi N. Aliyu",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/3MfdHLY/ndagii.jpg/placeholder.svg?height=200&width=200",
     position: "President",
     activeFrom: "1986-1990",
   },
   {
     id: "19",
     name: "Alhaji Alfa Muhammad",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/QJ92zW4/alfa-mohammed.jpg",
     position: "1st Vice President",
     activeFrom: "1986-1990",
   },
@@ -307,7 +308,7 @@ export const members = [
   {
     id: "18",
     name: "Alfa Muhammad",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/QJ92zW4/alfa-mohammed.jpg",
     position: "President",
     activeFrom: "1990-2006",
   },
@@ -335,7 +336,7 @@ export const members = [
   {
     id: "20",
     name: "Muhammad B. Ndamiini",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.cod/xMYzVZ5/kawu.jpg",
     position: "Asst. Sec Gen",
     activeFrom: "1990-2006",
   },
@@ -409,7 +410,7 @@ export const members = [
   {
     id: "30",
     name: "Abdullahi N. Aliyu",
-    image: "",
+    image: "https://i.ibb.co/3MfdHLY/ndagii.jpg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
@@ -446,7 +447,7 @@ export const members = [
   {
     id: "19",
     name: "Sulayman Y. Muhammad",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/T8dfsVc/sulyman-y.jpg",
     position: "1st Vice President",
     activeFrom: "2006-2016",
   },
