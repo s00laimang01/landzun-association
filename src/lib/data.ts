@@ -336,7 +336,7 @@ export const members = [
   {
     id: "20",
     name: "Muhammad B. Ndamiini",
-    image: "https://i.ibb.cod/xMYzVZ5/kawu.jpg",
+    image: "https://i.ibb.co/xMYzVZ5/kawu.jpg",
     position: "Asst. Sec Gen",
     activeFrom: "1990-2006",
   },
@@ -553,7 +553,7 @@ export const members = [
   {
     id: "30",
     name: "Muhammad B. Mustapha",
-    image: "",
+    image: "https://i.ibb.co/mB2dnGH/the-president.jpg",
     position: "Ex Official",
     activeFrom: "2006-2016",
   },

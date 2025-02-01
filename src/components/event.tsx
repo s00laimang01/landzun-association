@@ -39,14 +39,14 @@ const useCountdown = (targetDate: string) => {
 };
 
 export default function EventBanner() {
-  const eventDate = "2024-11-03T10:00:00";
+  const eventDate = "2025-02-08T10:00:00";
   const timeLeft = useCountdown(eventDate);
   const isEventOver = Object.keys(timeLeft).length === 0;
 
   const eventDetails = {
     title: "Meeting",
     date: "November 3, 2024",
-    location: `${appConfigs.name} President Resident Minna`,
+    location: `${appConfigs.name} President Resident Bida`,
   };
 
   return (
