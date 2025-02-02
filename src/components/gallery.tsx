@@ -123,6 +123,60 @@ export const Gallery = () => {
         </div>
 
         <div>
+          <h1 className="text-4xl font-bold text-center">
+            Some Pictures of {appConfigs.name} members.
+          </h1>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 2000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {[
+                Image.President1,
+                Image.President2,
+                Image.President4,
+                Image.President6,
+                Image.President7,
+                Image.President8,
+                Image.PresidentEtsu,
+                Image.PresidentGroup,
+                Image.PresidentMembers,
+                Image.PresidentEmir,
+                Image.PresidentColorFul,
+                Image.PresidentMembers2,
+              ].map((_, i) => (
+                <CarouselItem className="md:basis-1 lg:basis-1/2 mt-3" key={i}>
+                  <MediaExpander
+                    name={
+                      [
+                        "",
+                        "Shaba Nupe Abdulmalik Ndayako and prof. Sheikh abdullah Sitted during the award night in federal polytecnic Bida.",
+                        "",
+                        "Dr Muhammad Daniya giving a speech during an award Night in federal polytecnic Bida.",
+                        "",
+                        "",
+                        "President Alh. Usman B. Ibrahim delivery his keynote address to his Royal Highness Alh. Dr. Yahaya Abubakar in his wadata palace Bida.",
+                        "President Abdullahi N. Aliyu with other members of the association in a group photograph with his Royal Highness Alh. Dr. Umaru Sanda Ndayako During and award night in federal polytecnic Bida.",
+                        "President and other members of the association all sitted before the emir in his wadata palace Bida.",
+                        //"",
+                        "His Royal Highness Alh. Dr. Umaru Sanda Ndayako CFR and chairman of the traditional rulers in Niger State giving a speech to the landzun members during an award night",
+                        "Landzun members in their colorful picture at the palace during their coutesy visit",
+                        "President Abdullahi N. Aliyu with other members of the association in a group photograph with his Royal Highness Alh. Dr. Umaru Sanda Ndayako During and award night in federal polytecnic Bida.",
+                      ][i]
+                    }
+                    src={_}
+                    type="img"
+                  >
+                    <Img src={_} className="h-[25rem] w-full" />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <div>
           <h1 className="text-2xl font-bold text-center">
             The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr)
             Umaru Sanda Ndayako CFR

@@ -37,6 +37,18 @@ import Clinic from "../assets/lada-clinic.jpg";
 import Land from "../assets/lada-land.jpg";
 import SingingPraise from "../assets/singing-praise.mp4";
 import LandzunRiver from "../assets/landzun-river.jpg";
+import President8 from "../assets/president-8.jpg";
+import President7 from "../assets/president-7.jpg";
+import President6 from "../assets/president-6.jpg";
+import President4 from "../assets/president-4.jpg";
+import President2 from "../assets/president-two.jpg";
+import PresidentGroup from "../assets/group-pictures.jpg";
+import President1 from "../assets/president-one.jpg";
+import PresidentMembers from "../assets/president-with-other-members.jpg";
+import PresidentEtsu from "../assets/president-with-etsu.jpg";
+import PresidentEmir from "../assets/WhatsApp Image 2025-02-01 at 20.00.51_913a9ca3.jpg";
+import PresidentColorFul from "../assets/colorful.jpg";
+import PresidentMembers2 from "../assets/president-with-other-members2.jpg";
 
 export default {
   ImageOne,
@@ -78,4 +90,16 @@ export default {
   Clinic,
   LandzunRiver,
   SingingPraise,
+  President1,
+  President2,
+  President4,
+  President6,
+  President7,
+  President8,
+  PresidentEtsu,
+  PresidentGroup,
+  PresidentMembers,
+  PresidentEmir,
+  PresidentColorFul,
+  PresidentMembers2,
 };
