@@ -26,11 +26,7 @@ export const MediaExpander: FC<{
               <DialogTitle className="text-white text-base font-bold line-clamp-2">
                 {name}
               </DialogTitle>
-              {note && (
-                <DialogDescription className="text-white">
-                  {note}
-                </DialogDescription>
-              )}
+              {note && <p className="text-white md:text-sm text-xs">{note}</p>}
             </div>
           )}
         </div>
