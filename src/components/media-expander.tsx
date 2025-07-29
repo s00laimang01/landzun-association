@@ -52,7 +52,7 @@ export const MediaExpander: FC<{
           )}
         </div>
         {note && (
-          <DialogDescription className="mt-4 text-sm text-gray-500">
+          <DialogDescription className="mt-4 md:text-sm text-xs text-gray-500">
             {note}
             {/*  */}
           </DialogDescription>
