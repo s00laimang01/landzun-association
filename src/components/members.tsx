@@ -101,7 +101,7 @@ export default function MembersSection() {
                     >
                       <Card className="overflow-hidden h-full">
                         <CardHeader className="p-0">
-                          <Avatar className="w-full rounded-none md:h-[250px] h-[350px]">
+                          <Avatar className="w-full rounded-none md:h-[250px] h-[450px]">
                             <AvatarImage
                               className="rounded-none object-top"
                               src={

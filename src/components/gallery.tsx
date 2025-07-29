@@ -239,7 +239,7 @@ export const Gallery = () => {
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2000 })]}
+            plugins={[Autoplay({ delay: 2400 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
               {[
@@ -291,7 +291,7 @@ export const Gallery = () => {
           <Carousel
             className="w-full"
             opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2000 })]}
+            plugins={[Autoplay({ delay: 2200 })]}
           >
             <CarouselContent className="w-full cursor-pointer">
               {[

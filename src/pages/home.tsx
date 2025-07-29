@@ -106,7 +106,7 @@ export default function Home() {
                   <Img
                     src={patron.src}
                     alt={`Community event image ${index + 1}`}
-                    className="rounded-lg w-full h-[30rem] md:h-[25rem]"
+                    className="rounded-lg w-full md:aspect-[4/3] aspect-[3/3]"
                   />
                 </MediaExpander>
               </CarouselItem>

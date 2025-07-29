@@ -178,7 +178,7 @@ export default function AboutUs() {
                   <Img
                     src={_}
                     alt={`Image-${i}`}
-                    className="h-[25rem] w-full rounded-lg"
+                    className="aspect-[5/3] rounded-lg"
                   />
                 </MediaExpander>
               </CarouselItem>
