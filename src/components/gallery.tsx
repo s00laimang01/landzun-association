@@ -83,7 +83,7 @@ const etsuYahayaVideos = [
 export const Gallery = () => {
   return (
     <Section className="flex flex-col gap-4">
-      <h1 className="text-4xl font-bold text-center opacity-30">Our Gallery</h1>
+      <h1 className="text-4xl font-bold text-center">Our Gallery</h1>
       <Text>
         Explore the heart of the <b>{appConfigs.name}</b> through our gallery.
         See Bida's rich heritage, community events, and development projects.
@@ -111,7 +111,7 @@ export const Gallery = () => {
                     <Img
                       src={_.src}
                       alt={`Image-${i}`}
-                      className="h-[25rem] w-full"
+                      className="md:h-[600px] h-[300px] w-full"
                     />
                   </MediaExpander>
                 </CarouselItem>
