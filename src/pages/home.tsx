@@ -95,7 +95,7 @@ export default function Home() {
 
       <Section>
         {/* Image Carousel */}
-        <h2 className="text-center text-3xl mb-8 opacity-30 font-bold">
+        <h2 className="text-center text-3xl mb-8 font-bold">
           The Grand Patrons Of {appConfigs.name}
         </h2>
         <Carousel className="w-full">
