@@ -111,7 +111,7 @@ export const Gallery = () => {
                     <Img
                       src={_.src}
                       alt={`Image-${i}`}
-                      className="md:h-[600px] h-[300px] w-full"
+                      className="h-[600px] w-full"
                     />
                   </MediaExpander>
                 </CarouselItem>
