@@ -76,7 +76,8 @@ export const members = [
   {
     id: "4",
     name: "Mall Salihu Ndagi",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/cKrp3hfB/Whats-App-Image-2025-07-23-at-12-31-20-9cfea111.jpg",
     position: "Sec Gen",
     activeFrom: "1982-1986",
   },
@@ -476,7 +477,8 @@ export const members = [
   {
     id: "30",
     name: "Abdulkadir H. Yahaya",
-    image: "",
+    image:
+      "https://i.ibb.co/W4dRCLy1/Whats-App-Image-2025-07-23-at-12-13-16-7966a73b.jpg",
     position: "Fin. Sec",
     activeFrom: "2006-2016",
   },
@@ -623,7 +625,8 @@ export const members = [
   {
     id: "30",
     name: "Muhammad Yusuf Raji",
-    image: "",
+    image:
+      "https://i.ibb.co/Mk3KxbHM/Whats-App-Image-2025-08-03-at-18-29-10-149f6b9e.jpg",
     position: "Asst Fin. Sec",
     activeFrom: "2016-2024",
     email: "",
