@@ -12,6 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "@/lib/imports";
 import { MediaExpander } from "./media-expander";
 import { Section } from "./section";
+import {cn} from "@/lib/utils.ts";
 
 const galleries = [
   { src: Image.ImageOne, type: "img" },
@@ -32,6 +33,20 @@ const galleries = [
   { src: Image.ImageSeventeen, type: "img" },
   { src: Image.ImageEighteen, type: "img" },
 ];
+
+const images_of_1990 = [
+    { src: Image.ImagesOf1990One, type: "img" },
+    { src: Image.ImagesOf1990Two, type: "img" },
+    { src: Image.ImagesOf1990Three, type: "img" },
+    { src: Image.ImagesOf1990Four, type: "img" },
+    { src: Image.ImagesOf1990Five, type: "img" },
+    { src: Image.ImagesOf1990Six, type: "img" },
+    { src: Image.ImagesOf1990Eight, type: "img" },
+    { src: Image.ImagesOf1990Nine, type: "img" },
+    { src: Image.ImagesOf1990Ten, type: "img" },
+    { src: Image.ImagesOf1990Eleven, type: "img" },
+    { src: Image.ImagesOf1990Twelve, type: "img" }
+]
 
 const UmarSandaVideos = [
   {
@@ -91,14 +106,47 @@ export const Gallery = () => {
         gatherings, and health initiatives, showcasing our commitment to
         preserving traditions and fostering community spirit.
       </Text>
-      <br />
+      <br /><br />
       <div className="flex flex-col gap-5">
-        <div>
+
+          <div>
+              <Text className="font-semibold">
+                  Memories from the 40th Anniversary,General Meeting and Award of
+                  Certificate of Service to the Executives held at CABS, Niger State
+                  Polytechnic Bida, on Saturday, June 29th, 2024
+              </Text>
+              <br/>
+              <Carousel
+                  className="w-full"
+                  opts={{ loop: true }}
+                  plugins={[Autoplay({ delay: 5000 })]}
+              >
+                  <CarouselContent className="w-full cursor-pointer">
+                      {images_of_1990.map((_, i) => (
+                          <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
+                              <MediaExpander src={_.src} type={_.type as "img"}>
+                                  <Img
+                                      src={_.src}
+                                      alt={`Image-${i}`}
+                                      className={cn("md:h-[600px] h-[300px] w-full")}
+                                  />
+                              </MediaExpander>
+                          </CarouselItem>
+                      ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-0 -ml-2" />
+                  <CarouselNext className="right-0 mr-0" />
+              </Carousel>
+          </div>
+
+
+          <div>
           <Text className="font-semibold">
             Memories from the 40th Anniversary,General Meeting and Award of
             Certificate of Service to the Executives held at CABS, Niger State
             Polytechnic Bida, on Saturday, June 29th, 2024
           </Text>
+            <br/>
           <Carousel
             className="w-full"
             opts={{ loop: true }}

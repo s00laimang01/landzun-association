@@ -8,6 +8,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Img } from "react-image";
+import {cn} from "@/lib/utils.ts";
 
 export const MediaExpander: FC<{
   type?: "img" | "vid";
@@ -15,7 +16,8 @@ export const MediaExpander: FC<{
   src: string;
   name?: string;
   children: ReactNode;
-}> = ({ type = "img", note, src, children, name }) => {
+  className?: string;
+}> = ({ type = "img", note, src, children, name, className }) => {
   return (
     <Dialog>
       <DialogTrigger asChild className="cursor-pointer">
@@ -41,7 +43,7 @@ export const MediaExpander: FC<{
               src={src}
               alt={name}
               width={1200}
-              className="rounded-lg md:h-[600px] h-[300px]"
+              className={cn("rounded-lg md:h-[600px] h-[300px]", className)}
             />
           ) : (
             <video src={src} autoPlay controls className="w-full rounded-lg" />

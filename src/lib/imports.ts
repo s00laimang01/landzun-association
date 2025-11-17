@@ -49,6 +49,21 @@ import PresidentEtsu from "../assets/president-with-etsu.jpg";
 import PresidentEmir from "../assets/WhatsApp Image 2025-02-01 at 20.00.51_913a9ca3.jpg";
 import PresidentColorFul from "../assets/colorful.jpg";
 import PresidentMembers2 from "../assets/president-with-other-members2.jpg";
+import ImagesOf1990One from '../assets/1990/1.jpg'
+import ImagesOf1990Two from '../assets/1990/2.jpg'
+import ImagesOf1990Three from '../assets/1990/3.jpg'
+import ImagesOf1990Four from '../assets/1990/4.jpg'
+import ImagesOf1990Five from '../assets/1990/5.jpg'
+import ImagesOf1990Six from '../assets/1990/6.jpg'
+import ImagesOf1990Seven from '../assets/1990/7.jpg'
+import ImagesOf1990Eight from '../assets/1990/8.jpg'
+import ImagesOf1990Nine from '../assets/1990/9.jpg'
+import ImagesOf1990Ten from '../assets/1990/10.jpg'
+import ImagesOf1990Eleven from '../assets/1990/11.jpg'
+import ImagesOf1990Twelve from '../assets/1990/12.jpg'
+// import ImageOf1990Thirteen from '../assets/1990'
+
+
 
 export default {
   ImageOne,
@@ -102,4 +117,16 @@ export default {
   PresidentEmir,
   PresidentColorFul,
   PresidentMembers2,
+    ImagesOf1990One,
+    ImagesOf1990Two,
+    ImagesOf1990Three,
+    ImagesOf1990Four,
+    ImagesOf1990Five,
+    ImagesOf1990Six,
+    ImagesOf1990Seven,
+    ImagesOf1990Eight,
+    ImagesOf1990Nine,
+    ImagesOf1990Ten,
+    ImagesOf1990Eleven,
+    ImagesOf1990Twelve
 };

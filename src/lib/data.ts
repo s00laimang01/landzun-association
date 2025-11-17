@@ -141,7 +141,7 @@ export const members = [
   {
     id: "13",
     name: "Usman B. Ibrahim",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Fin Sec",
     activeFrom: "1982-1986",
     phoneNumber: "123-456-7890",
@@ -250,7 +250,7 @@ export const members = [
   {
     id: "30",
     name: "Usman B. Ibrahim",
-    image: "",
+    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Sec. Special Duties",
     activeFrom: "1986-1990",
   },
@@ -441,7 +441,7 @@ export const members = [
   {
     id: "18",
     name: "Alhaji Usman B. Ibrahim",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "President",
     activeFrom: "2006-2016",
   },
@@ -707,7 +707,7 @@ export const members = [
   {
     id: "30",
     name: "Usman B. Ibrahim",
-    image: "",
+    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     email: "",
