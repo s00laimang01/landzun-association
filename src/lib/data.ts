@@ -55,7 +55,8 @@ export const members = [
   {
     id: "1",
     name: "Alh Abdullahi A. Adamu",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/DgvvX1pb/Whats-App-Image-2025-12-21-at-11-01-25-AM.jpg",
     position: "President",
     activeFrom: "1982-1986",
   },
@@ -68,7 +69,7 @@ export const members = [
   },
   {
     id: "3",
-    name: "Alh Auda Koloce",
+    name: "Alh Audu Koloce",
     image: "/placeholder.svg?height=200&width=200",
     position: "2nd Vice President",
     activeFrom: "1982-1986",
@@ -84,7 +85,8 @@ export const members = [
   {
     id: "5",
     name: "Mall Mohammed B. Shehu",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/bM11rhgJ/Whats-App-Image-2025-12-21-at-11-05-38-AM.jpg",
     position: "Asst Sec Gen",
     activeFrom: "1982-1986",
   },
@@ -105,7 +107,8 @@ export const members = [
   {
     id: "8",
     name: "Dr. Usman Nakordi",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/DDkByk0M/Whats-App-Image-2025-12-21-at-11-07-38-AM.jpg",
     position: "Sec Special Duties",
     activeFrom: "1982-1986",
   },
@@ -141,7 +144,8 @@ export const members = [
   {
     id: "13",
     name: "Usman B. Ibrahim",
-    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
+    image:
+      "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Fin Sec",
     activeFrom: "1982-1986",
     phoneNumber: "123-456-7890",
@@ -205,7 +209,8 @@ export const members = [
   {
     id: "20",
     name: "Dr Usman Nakorgi",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/DDkByk0M/Whats-App-Image-2025-12-21-at-11-07-38-AM.jpg",
     position: "Sec Gen",
     activeFrom: "1986-1990",
   },
@@ -250,7 +255,8 @@ export const members = [
   {
     id: "30",
     name: "Usman B. Ibrahim",
-    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
+    image:
+      "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Sec. Special Duties",
     activeFrom: "1986-1990",
   },
@@ -293,7 +299,8 @@ export const members = [
   {
     id: "30",
     name: "Alh Muhammad Salihu",
-    image: "",
+    image:
+      "https://i.ibb.co/5Xr85gGP/Whats-App-Image-2025-12-21-at-11-16-10-AM.jpg",
     position: "Ex Official",
     activeFrom: "1986-1990",
   },
@@ -323,7 +330,8 @@ export const members = [
   {
     id: "20",
     name: "Usman Nakordi",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/DDkByk0M/Whats-App-Image-2025-12-21-at-11-07-38-AM.jpg",
     position: "2nd Vice President",
     activeFrom: "1990-2006",
   },
@@ -418,7 +426,8 @@ export const members = [
   {
     id: "30",
     name: "Muhammad B. Shehu",
-    image: "",
+    image:
+      "https://i.ibb.co/bM11rhgJ/Whats-App-Image-2025-12-21-at-11-05-38-AM.jpg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
@@ -441,7 +450,8 @@ export const members = [
   {
     id: "18",
     name: "Alhaji Usman B. Ibrahim",
-    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
+    image:
+      "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "President",
     activeFrom: "2006-2016",
   },
@@ -455,7 +465,8 @@ export const members = [
   {
     id: "20",
     name: "Muhammad B. Shehu",
-    image: "/placeholder.svg?height=200&width=200",
+    image:
+      "https://i.ibb.co/bM11rhgJ/Whats-App-Image-2025-12-21-at-11-05-38-AM.jpg",
     position: "2nd Vice President",
     activeFrom: "2006-2016",
   },
@@ -516,7 +527,8 @@ export const members = [
   {
     id: "30",
     name: "Alhaji Ndagi Albdulkadir",
-    image: "",
+    image:
+      "https://i.ibb.co/rfbs6sQp/Whats-App-Image-2025-12-21-at-11-20-48-AM.jpg",
     position: "Social Sec",
     activeFrom: "2006-2016",
   },
@@ -707,7 +719,8 @@ export const members = [
   {
     id: "30",
     name: "Usman B. Ibrahim",
-    image: "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
+    image:
+      "https://i.ibb.co/BKQMYpsK/Whats-App-Image-2025-11-17-at-11-17-43-1df6e3bf.jpg",
     position: "Ex Official",
     activeFrom: "2016-2024",
     email: "",
