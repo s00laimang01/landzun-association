@@ -535,7 +535,7 @@ export const members = [
   {
     id: "30",
     name: "Muhammad Liman",
-    image: "https://i.ibb.co/314kC50/mohm-liman.jpg",
+    image: "https://i.ibb.co/v4XbD6qJ/Whats-App-Image-2025-12-21-at-11-24-16-AM.jpg",
     position: "Legal Adviser",
     activeFrom: "2006-2016",
     phoneNumber: "08033360105",
