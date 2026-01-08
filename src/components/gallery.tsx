@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "@/lib/imports";
 import { MediaExpander } from "./media-expander";
 import { Section } from "./section";
-import {cn} from "@/lib/utils.ts";
+import { cn } from "@/lib/utils.ts";
 
 const galleries = [
   { src: Image.ImageOne, type: "img" },
@@ -35,18 +35,37 @@ const galleries = [
 ];
 
 const images_of_1990 = [
-    { src: Image.ImagesOf1990One, type: "img" },
-    { src: Image.ImagesOf1990Two, type: "img" },
-    { src: Image.ImagesOf1990Three, type: "img" },
-    { src: Image.ImagesOf1990Four, type: "img" },
-    { src: Image.ImagesOf1990Five, type: "img" },
-    { src: Image.ImagesOf1990Six, type: "img" },
-    { src: Image.ImagesOf1990Eight, type: "img" },
-    { src: Image.ImagesOf1990Nine, type: "img" },
-    { src: Image.ImagesOf1990Ten, type: "img" },
-    { src: Image.ImagesOf1990Eleven, type: "img" },
-    { src: Image.ImagesOf1990Twelve, type: "img" }
-]
+  {
+    src: Image.ImagesOf1990One,
+    type: "img",
+  },
+  {
+    src: Image.ImagesOf1990Two,
+    type: "img",
+    note: "From left to right 1.Alh Mustapha Moh'd Babatifin, 2. Dr. Abubakar Moh'd Yakatun, 3. Alh Ndako (Tipsy), 4. Alh Musa Abdul",
+  },
+  {
+    src: Image.ImagesOf1990Three,
+    type: "img",
+    note: "Hajiya Nnasha Ewanko with Alh. Magajin of radio house Bida",
+  },
+  { src: Image.ImagesOf1990Four, type: "img" },
+  {
+    src: Image.ImagesOf1990Five,
+    type: "img",
+    note: "Alh. Shettima Nupe with Ndasalawu the Dogarin Etsu Nupe Dr. Alh. Umaru Sanda Ndayako",
+  },
+  { src: Image.ImagesOf1990Six, type: "img" },
+  {
+    src: Image.ImagesOf1990Eight,
+    type: "img",
+    note: " Prensentation of Awards by HRH the Etsu Nupe Dr. Alh. Umaru Sanda Ndayako to Alh. Bagudu Shettima Nupe.",
+  },
+  { src: Image.ImagesOf1990Nine, type: "img" },
+  { src: Image.ImagesOf1990Ten, type: "img" },
+  { src: Image.ImagesOf1990Eleven, type: "img" },
+  { src: Image.ImagesOf1990Twelve, type: "img" },
+];
 
 const UmarSandaVideos = [
   {
@@ -106,47 +125,46 @@ export const Gallery = () => {
         gatherings, and health initiatives, showcasing our commitment to
         preserving traditions and fostering community spirit.
       </Text>
-      <br /><br />
+      <br />
+      <br />
       <div className="flex flex-col gap-5">
+        <div>
+          <Text className="font-semibold"></Text>
+          <br />
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {images_of_1990.map((_, i) => (
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
+                  <MediaExpander
+                    note={_.note || ""}
+                    src={_.src}
+                    type={_.type as "img"}
+                  >
+                    <Img
+                      src={_.src}
+                      alt={`Image-${i}`}
+                      className={cn("md:h-[600px] h-[300px] w-full")}
+                    />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -ml-2" />
+            <CarouselNext className="right-0 mr-0" />
+          </Carousel>
+        </div>
 
-          <div>
-              <Text className="font-semibold">
-                  Memories from the 40th Anniversary,General Meeting and Award of
-                  Certificate of Service to the Executives held at CABS, Niger State
-                  Polytechnic Bida, on Saturday, June 29th, 2024
-              </Text>
-              <br/>
-              <Carousel
-                  className="w-full"
-                  opts={{ loop: true }}
-                  plugins={[Autoplay({ delay: 5000 })]}
-              >
-                  <CarouselContent className="w-full cursor-pointer">
-                      {images_of_1990.map((_, i) => (
-                          <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
-                              <MediaExpander src={_.src} type={_.type as "img"}>
-                                  <Img
-                                      src={_.src}
-                                      alt={`Image-${i}`}
-                                      className={cn("md:h-[600px] h-[300px] w-full")}
-                                  />
-                              </MediaExpander>
-                          </CarouselItem>
-                      ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-0 -ml-2" />
-                  <CarouselNext className="right-0 mr-0" />
-              </Carousel>
-          </div>
-
-
-          <div>
+        <div>
           <Text className="font-semibold">
             Memories from the 40th Anniversary,General Meeting and Award of
             Certificate of Service to the Executives held at CABS, Niger State
             Polytechnic Bida, on Saturday, June 29th, 2024
           </Text>
-            <br/>
+          <br />
           <Carousel
             className="w-full"
             opts={{ loop: true }}

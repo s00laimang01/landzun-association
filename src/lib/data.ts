@@ -93,7 +93,7 @@ export const members = [
   {
     id: "6",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/src/assets/a-abdullahi.jpeg",
     position: "Treasurer",
     activeFrom: "1982-1986",
   },
@@ -241,7 +241,7 @@ export const members = [
   {
     id: "30",
     name: "Dr Sheikh A. Abdullahi",
-    image: "",
+    image: "/src/assets/a-abdullahi-2.jpeg",
     position: "Treasurer",
     activeFrom: "1986-1990",
   },
@@ -441,7 +441,7 @@ export const members = [
   {
     id: "30",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "",
+    image: "/src/assets/a-abdullahi-2.jpeg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
@@ -535,7 +535,8 @@ export const members = [
   {
     id: "30",
     name: "Muhammad Liman",
-    image: "https://i.ibb.co/v4XbD6qJ/Whats-App-Image-2025-12-21-at-11-24-16-AM.jpg",
+    image:
+      "https://i.ibb.co/v4XbD6qJ/Whats-App-Image-2025-12-21-at-11-24-16-AM.jpg",
     position: "Legal Adviser",
     activeFrom: "2006-2016",
     phoneNumber: "08033360105",
