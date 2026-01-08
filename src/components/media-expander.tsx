@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,11 +8,11 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Img } from "react-image";
-import {cn} from "@/lib/utils.ts";
+import { cn } from "@/lib/utils.ts";
 
 export const MediaExpander: FC<{
   type?: "img" | "vid";
-  note?: string;
+  note?: string | React.ReactNode;
   src: string;
   name?: string;
   children: ReactNode;

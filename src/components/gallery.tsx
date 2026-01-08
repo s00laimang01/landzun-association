@@ -42,7 +42,15 @@ const images_of_1990 = [
   {
     src: Image.ImagesOf1990Two,
     type: "img",
-    note: "From left to right 1.Alh Mustapha Moh'd Babatifin, 2. Dr. Abubakar Moh'd Yakatun, 3. Alh Ndako (Tipsy), 4. Alh Musa Abdul",
+    note: (
+      <div>
+        <p>From left to right</p>
+        <p>1. Alh Mustapha Moh'd Babatifin</p>
+        <p>2. Dr. Abubakar Moh'd Yakatun</p>
+        <p>3. Alh Ndako (Tipsy)</p>
+        <p>4. Alh Musa Abdul</p>
+      </div>
+    ),
   },
   {
     src: Image.ImagesOf1990Three,
@@ -143,6 +151,7 @@ export const Gallery = () => {
                     note={_.note || ""}
                     src={_.src}
                     type={_.type as "img"}
+                    className={i === 2 ? "-rotate-90" : ""}
                   >
                     <Img
                       src={_.src}
