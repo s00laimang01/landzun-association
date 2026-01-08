@@ -61,7 +61,7 @@ const images_of_1990 = [
   {
     src: Image.ImagesOf1990Five,
     type: "img",
-    note: "Alh. Shettima Nupe with Ndasalawu the Dogarin Etsu Nupe Dr. Alh. Umaru Sanda Ndayako",
+    note: "From left Alh. Bagudu Shettima Nupe with Ndasalawu the Dogarin Etsu Nupe Dr. Alh. Umaru Sanda Ndayako",
   },
   { src: Image.ImagesOf1990Six, type: "img" },
   {
