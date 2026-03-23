@@ -93,7 +93,7 @@ export const members = [
   {
     id: "6",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "/src/assets/a-abdullahi.jpeg",
+    image: "/assets/a-abdullahi.jpeg",
     position: "Treasurer",
     activeFrom: "1982-1986",
   },
@@ -178,7 +178,7 @@ export const members = [
   {
     id: "17",
     name: "Baba Alfa",
-    image: "/src/assets/baba-alfa.jpeg",
+    image: "/assets/baba-alfa.jpeg",
     position: "Ex Official",
     activeFrom: "1982-1986",
   },
@@ -241,7 +241,7 @@ export const members = [
   {
     id: "30",
     name: "Dr Sheikh A. Abdullahi",
-    image: "/src/assets/a-abdullahi-2.jpeg",
+    image: "/assets/a-abdullahi-2.jpeg",
     position: "Treasurer",
     activeFrom: "1986-1990",
   },
@@ -278,7 +278,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "/src/assets/baba-alfa.jpeg",
+    image: "/assets/baba-alfa.jpeg",
     position: "P.R.O",
     activeFrom: "1986-1990",
   },
@@ -367,7 +367,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "/src/assets/baba-alfa.jpeg",
+    image: "/assets/baba-alfa.jpeg",
     position: "Treasurer",
     activeFrom: "1990-2006",
   },
@@ -441,7 +441,7 @@ export const members = [
   {
     id: "30",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "/src/assets/a-abdullahi-2.jpeg",
+    image: "/assets/a-abdullahi-2.jpeg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
@@ -473,7 +473,7 @@ export const members = [
   {
     id: "20",
     name: "Baba Alfa",
-    image: "/src/assets/baba-alfa.jpeg",
+    image: "/assets/baba-alfa.jpeg",
     position: "Sec Gen",
     activeFrom: "2006-2016",
   },
@@ -593,7 +593,7 @@ export const members = [
   {
     id: "19",
     name: "Baba Alfa",
-    image: "/src/assets/baba-alfa.jpeg",
+    image: "/assets/baba-alfa.jpeg",
     position: "1st Vice President",
     activeFrom: "2016-2024",
     email: "babaalfa21@gmail.com",
