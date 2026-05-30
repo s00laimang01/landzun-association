@@ -93,7 +93,7 @@ export const members = [
   {
     id: "6",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "/assets/a-abdullahi.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Treasurer",
     activeFrom: "1982-1986",
   },
@@ -241,7 +241,7 @@ export const members = [
   {
     id: "30",
     name: "Dr Sheikh A. Abdullahi",
-    image: "/assets/a-abdullahi-2.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Treasurer",
     activeFrom: "1986-1990",
   },
@@ -441,7 +441,7 @@ export const members = [
   {
     id: "30",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "/assets/a-abdullahi-2.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
