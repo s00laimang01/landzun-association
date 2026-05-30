@@ -93,7 +93,7 @@ export const members = [
   {
     id: "6",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
+    image: "https://i.ibb.co/5WqyR3zV/photo-5825630478965345725-x.jpg",
     position: "Treasurer",
     activeFrom: "1982-1986",
   },
@@ -178,7 +178,7 @@ export const members = [
   {
     id: "17",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
+    image: "https://i.ibb.co/Xf4GdfH1/photo-5823378679151660952-y.jpg",
     position: "Ex Official",
     activeFrom: "1982-1986",
   },
@@ -241,7 +241,7 @@ export const members = [
   {
     id: "30",
     name: "Dr Sheikh A. Abdullahi",
-    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
+    image: "https://i.ibb.co/5WqyR3zV/photo-5825630478965345725-x.jpg",
     position: "Treasurer",
     activeFrom: "1986-1990",
   },
@@ -278,7 +278,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "https://i.ibb.co/Xf4GdfH1/photo-5823378679151660952-y.jpg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "P.R.O",
     activeFrom: "1986-1990",
   },
@@ -367,7 +367,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "/assets/baba-alfa.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Treasurer",
     activeFrom: "1990-2006",
   },
@@ -441,7 +441,7 @@ export const members = [
   {
     id: "30",
     name: "Dr. Sheikh A. Abdullahi",
-    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
+    image: "https://i.ibb.co/5WqyR3zV/photo-5825630478965345725-x.jpg",
     position: "Ex Official",
     activeFrom: "1990-2006",
   },
