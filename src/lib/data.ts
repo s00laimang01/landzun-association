@@ -170,7 +170,7 @@ export const members = [
   {
     id: "16",
     name: "Mohammed A. Shehu",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "https://i.ibb.co/CpZm9vNS/photo-5825630478965345724-x.jpg",
     position: "Ex Official",
     activeFrom: "1982-1986",
     phoneNumber: "123-456-7890",
@@ -178,12 +178,12 @@ export const members = [
   {
     id: "17",
     name: "Baba Alfa",
-    image: "/assets/baba-alfa.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Ex Official",
     activeFrom: "1982-1986",
   },
 
-  //1886-1990
+  //1986-1990
   {
     id: "18",
     name: "Abdullahi N. Aliyu",
@@ -278,7 +278,7 @@ export const members = [
   {
     id: "30",
     name: "Baba Alfa",
-    image: "/assets/baba-alfa.jpeg",
+    image: "https://i.ibb.co/Xf4GdfH1/photo-5823378679151660952-y.jpg",
     position: "P.R.O",
     activeFrom: "1986-1990",
   },
@@ -473,7 +473,7 @@ export const members = [
   {
     id: "20",
     name: "Baba Alfa",
-    image: "/assets/baba-alfa.jpeg",
+    image: "https://i.ibb.co/cX7M2qWs/photo-5825630478965345722-y.jpg",
     position: "Sec Gen",
     activeFrom: "2006-2016",
   },
@@ -593,7 +593,7 @@ export const members = [
   {
     id: "19",
     name: "Baba Alfa",
-    image: "/assets/baba-alfa.jpeg",
+    image: "https://i.ibb.co/6J4GJ42j/photo-5825630478965345721-x.jpg",
     position: "1st Vice President",
     activeFrom: "2016-2024",
     email: "babaalfa21@gmail.com",
