@@ -75,6 +75,21 @@ const images_of_1990 = [
   { src: Image.ImagesOf1990Twelve, type: "img" },
 ];
 
+const governmentVisits = [
+  {
+    src: Image.GovernorBago1,
+    name: "Members of the association presenting the association's document to His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
+  },
+  {
+    src: Image.GovernorBago2,
+    name: "Members of the association in conversation with His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
+  },
+  {
+    src: Image.FormerGovernorGroup,
+    name: "Members of the association in a group photograph with the former Governor of Niger State, Dr. Mu'azu Babangida Aliyu (Talban Minna).",
+  },
+];
+
 const UmarSandaVideos = [
   {
     src: Image.UmarSandaVideo,
@@ -252,6 +267,29 @@ export const Gallery = () => {
         </div>
 
         <div>
+          <h1 className="text-4xl font-bold text-center">
+            {appConfigs.name} With The Government Of Niger State
+          </h1>
+          <Carousel
+            className="w-full"
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 2500 })]}
+          >
+            <CarouselContent className="w-full cursor-pointer">
+              {governmentVisits.map((_, i) => (
+                <CarouselItem className="md:basis-1 lg:basis-1/2 mt-3" key={i}>
+                  <MediaExpander name={_.name} src={_.src} type="img">
+                    <Img src={_.src} className="h-[25rem] w-full" />
+                  </MediaExpander>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -ml-2" />
+            <CarouselNext className="right-0 mr-0" />
+          </Carousel>
+        </div>
+
+        <div>
           <h1 className="text-2xl font-bold text-center">
             The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr)
             Umaru Sanda Ndayako CFR
@@ -307,6 +345,30 @@ export const Gallery = () => {
             </CarouselContent>
           </Carousel>
         </div>
+        <div>
+          <h1 className="text-4xl font-bold text-center">The History Of Bida</h1>
+          <br />
+          <Text>
+            A documentary on the history of Bida, the home of the Nupe people
+            and the community the <b>{appConfigs.name}</b> was founded to serve.
+          </Text>
+          <br />
+          <div className="w-full md:w-2/3 mx-auto cursor-pointer">
+            <MediaExpander
+              src={Image.HistoryOfBida}
+              type="vid"
+              name="The History of Bida"
+            >
+              <video
+                onPlay={() => {}}
+                src={Image.HistoryOfBida}
+                controls={false}
+                className="h-[25rem] w-full rounded-lg"
+              />
+            </MediaExpander>
+          </div>
+        </div>
+
         <div>
           <h1 className="text-4xl font-bold text-center">
             The Cultural Display Of Nupe People

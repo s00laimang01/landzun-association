@@ -62,6 +62,10 @@ import ImagesOf1990Ten from '../assets/1990/10.jpg'
 import ImagesOf1990Eleven from '../assets/1990/11.jpg'
 import ImagesOf1990Twelve from '../assets/1990/12.jpg'
 // import ImageOf1990Thirteen from '../assets/1990'
+import GovernorBago1 from "../assets/governor-bago-1.jpg";
+import GovernorBago2 from "../assets/governor-bago-2.jpg";
+import FormerGovernorGroup from "../assets/former-governor-group.jpg";
+import HistoryOfBida from "../assets/history-of-bida.mp4";
 
 
 
@@ -128,5 +132,9 @@ export default {
     ImagesOf1990Nine,
     ImagesOf1990Ten,
     ImagesOf1990Eleven,
-    ImagesOf1990Twelve
+    ImagesOf1990Twelve,
+    GovernorBago1,
+    GovernorBago2,
+    FormerGovernorGroup,
+    HistoryOfBida
 };
