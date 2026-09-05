@@ -1,53 +1,81 @@
 import Image from "../lib/imports";
 
 export const navLinks = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About Us",
-    path: "#about-us",
-  },
-  {
-    name: "Members",
-    path: "#members",
-  },
-  {
-    name: "Events",
-    path: "#events",
-  },
-  {
-    name: "Contact",
-    path: "#contact",
-  },
+  { name: "About", path: "#about" },
+  { name: "Patrons", path: "#patrons" },
+  { name: "Executives", path: "#executives" },
+  { name: "Gallery", path: "#gallery" },
+  { name: "Events", path: "#events" },
+  { name: "Contact", path: "#contact" },
 ];
 
 export const appConfigs = {
   name: "Landzun Development Association",
+  shortName: "LADA",
+  town: "Bida, Niger State",
+  foundedYear: 1982,
+  foundedOn: "21 August 1982",
+  interimAddress: "Banma, Kota Woro, Bida, Niger State",
+  permanentSite: "Bangaie Road, Bida",
 };
 
-export const impacts = [
-  "Local Initiatives",
-  "Green Spaces",
-  "Education",
-  "Volunteering",
-  "Cultural Events",
-  "Sustainability",
-  "Neighborhood Watch",
-  "Community Garden",
+export const purposes = [
+  "To promote social, cultural and economic integration among its members, the Bida community and the Nigerian society in general.",
+  "To foster unity and understanding amongst the members, the Bida community and other communities in the state and the country at large.",
+  "To undertake self-help projects.",
+];
+
+export const activities = [
+  {
+    title: "Health clinic at Bangaie ward",
+    detail:
+      "Constructed and equipped a health clinic at Bangaie ward, Bida, in 1983.",
+  },
+  {
+    title: "Support for patients",
+    detail:
+      "Supplied food provisions to patients admitted at Bida Federal Medical Centre and the General Hospital.",
+  },
+  {
+    title: "Advocacy to government",
+    detail:
+      "Appealed to successive governments for the provision of development projects for the town and its environs.",
+  },
+  {
+    title: "Public sensitisation",
+    detail:
+      "Radio and television advocacy on national programmes such as the census and general elections, and on social ills within the community.",
+  },
+  {
+    title: "Cooperative society",
+    detail: "Established a functional, registered Cooperative Society.",
+  },
+];
+
+export const events = [
+  {
+    title: "General Meeting",
+    date: "2024-11-03",
+    location: "Residence of the President, Bida",
+  },
+  {
+    title:
+      "40th Anniversary, General Meeting and Award of Certificates of Service to the Executives",
+    date: "2024-06-29",
+    location: "CABS, Niger State Polytechnic, Bida",
+  },
 ];
 
 export const grandPatronsOfTheAssociation = [
   {
     src: Image.FormarEmirImage,
-    note: "His Royal Highness \n Alh.（Dr）Umaru Sanda Ndayako, CFR  \nEtsu Nupe \n and Chairman, Niger State Council of Traditional Rulers",
-    name: "GRAND PATRON (1982 TO 2003)",
+    note: "His Royal Highness \n Alh. (Dr) Umaru Sanda Ndayako, CFR  \nEtsu Nupe \n and Chairman, Niger State Council of Traditional Rulers",
+    name: "Grand Patron, 1982 – 2003",
   },
   {
     src: Image.EmirImage,
-    note: "His Royal Highness \n Alh.（Dr）Yahaya Abubakar, CFR  \nEtsu Nupe \n and Chairman, Niger State Council of Traditional Rulers",
-    name: "GRAND PATRON (2003 TO-DATE)",
+    note: "His Royal Highness \n Alh. (Dr) Yahaya Abubakar, CFR  \nEtsu Nupe \n and Chairman, Niger State Council of Traditional Rulers",
+    name: "Grand Patron, 2003 – date",
   },
 ];
 

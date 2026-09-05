@@ -1,5 +1,5 @@
-import { appConfigs } from "@/lib/data";
-import { Text } from "./Text";
+import { ReactNode } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -7,472 +7,344 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { Img } from "react-image";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "@/lib/imports";
-import { MediaExpander } from "./media-expander";
-import { Section } from "./section";
-import { cn } from "@/lib/utils.ts";
+import { MediaExpander, MediaItem } from "./media-expander";
+import { Reveal, Section, SectionHeading } from "./section";
+import { cn } from "@/lib/utils";
 
-const galleries = [
-  { src: Image.ImageOne, type: "img" },
-  { src: Image.ImageTwo, type: "img" },
-  { src: Image.ImageThree, type: "img" },
-  { src: Image.ImageFour, type: "img" },
-  { src: Image.ImageFive, type: "img" },
-  { src: Image.ImageSix, type: "img" },
-  { src: Image.ImageEight, type: "img" },
-  { src: Image.ImageNine, type: "img" },
-  { src: Image.ImageTen, type: "img" },
-  { src: Image.ImageEleven, type: "img" },
-  { src: Image.ImageTwelve, type: "img" },
-  { src: Image.ImageThirteen, type: "img" },
-  { src: Image.ImageFourteen, type: "img" },
-  { src: Image.ImageFifteen, type: "img" },
-  { src: Image.ImageSixteen, type: "img" },
-  { src: Image.ImageSeventeen, type: "img" },
-  { src: Image.ImageEighteen, type: "img" },
-];
+type Row = {
+  eyebrow: string;
+  title: string;
+  lede?: ReactNode;
+  items: MediaItem[];
+  aspect?: string;
+  basis?: string;
+};
 
-const images_of_1990 = [
-  {
-    src: Image.ImagesOf1990One,
-    type: "img",
-  },
+const archive: MediaItem[] = [
+  { src: Image.ImagesOf1990One },
   {
     src: Image.ImagesOf1990Two,
-    type: "img",
-    note: (
-      <div>
-        <p>From left to right</p>
-        <p>1. Alh Mustapha Moh'd Babatifin</p>
-        <p>2. Dr. Abubakar Moh'd Yakatun</p>
-        <p>3. Alh Ndako (Tipsy)</p>
-        <p>4. Alh Musa Abdul</p>
-      </div>
-    ),
+    note: "From left: Alh. Mustapha Moh'd Babatifin, Dr. Abubakar Moh'd Yakatun, Alh. Ndako (Tipsy) and Alh. Musa Abdul.",
   },
   {
     src: Image.ImagesOf1990Three,
-    type: "img",
-    note: "Hajiya Nnasha Ewanko with Alh. Magajin of radio house Bida",
+    note: "Hajiya Nnasha Ewanko with Alh. Magajin of Radio House, Bida.",
   },
-  { src: Image.ImagesOf1990Four, type: "img" },
+  { src: Image.ImagesOf1990Four },
   {
     src: Image.ImagesOf1990Five,
-    type: "img",
-    note: "From left Alh. Bagudu Shettima Nupe with Ndasalawu the Dogarin Etsu Nupe Dr. Alh. Umaru Sanda Ndayako",
+    note: "From left: Alh. Bagudu Shettima Nupe with Ndasalawu, the Dogarin Etsu Nupe, Dr. Alh. Umaru Sanda Ndayako.",
   },
-  { src: Image.ImagesOf1990Six, type: "img" },
+  { src: Image.ImagesOf1990Six },
   {
     src: Image.ImagesOf1990Eight,
-    type: "img",
-    note: " Prensentation of Awards by HRH the Etsu Nupe Dr. Alh. Umaru Sanda Ndayako to Alh. Bagudu Shettima Nupe.",
+    note: "Presentation of awards by HRH the Etsu Nupe, Dr. Alh. Umaru Sanda Ndayako, to Alh. Bagudu Shettima Nupe.",
   },
-  { src: Image.ImagesOf1990Nine, type: "img" },
-  { src: Image.ImagesOf1990Ten, type: "img" },
-  { src: Image.ImagesOf1990Eleven, type: "img" },
-  { src: Image.ImagesOf1990Twelve, type: "img" },
+  { src: Image.ImagesOf1990Nine },
+  { src: Image.ImagesOf1990Ten },
+  { src: Image.ImagesOf1990Eleven },
+  { src: Image.ImagesOf1990Twelve },
 ];
 
-const governmentVisits = [
+const anniversary: MediaItem[] = [
+  Image.ImageOne,
+  Image.ImageTwo,
+  Image.ImageThree,
+  Image.ImageFour,
+  Image.ImageFive,
+  Image.ImageSix,
+  Image.ImageEight,
+  Image.ImageNine,
+  Image.ImageTen,
+  Image.ImageEleven,
+  Image.ImageTwelve,
+  Image.ImageThirteen,
+  Image.ImageFourteen,
+  Image.ImageFifteen,
+  Image.ImageSixteen,
+  Image.ImageSeventeen,
+  Image.ImageEighteen,
+].map((src) => ({ src }));
+
+const groupPhotoNote =
+  "President Abdullahi N. Aliyu with other members of the association in a group photograph with His Royal Highness Alh. Dr. Umaru Sanda Ndayako during an award night at Federal Polytechnic, Bida.";
+
+const inTheField: MediaItem[] = [
+  { src: Image.President1 },
+  {
+    src: Image.President2,
+    note: "Shaba Nupe Abdulmalik Ndayako and Prof. Sheikh Abdullahi seated during the award night at Federal Polytechnic, Bida.",
+  },
+  { src: Image.President4 },
+  {
+    src: Image.President6,
+    note: "Dr Muhammad Daniya giving a speech during an award night at Federal Polytechnic, Bida.",
+  },
+  { src: Image.President7 },
+  { src: Image.President8 },
+  {
+    src: Image.PresidentEtsu,
+    note: "President Alh. Usman B. Ibrahim delivering his keynote address to His Royal Highness Alh. Dr. Yahaya Abubakar at the Wadata Palace, Bida.",
+  },
+  { src: Image.PresidentGroup, note: groupPhotoNote },
+  {
+    src: Image.PresidentMembers,
+    note: "The President and other members of the association seated before the Emir at the Wadata Palace, Bida.",
+  },
+  {
+    src: Image.PresidentEmir,
+    note: "His Royal Highness Alh. Dr. Umaru Sanda Ndayako, CFR, Chairman of the Council of Traditional Rulers in Niger State, addressing Landzun members during an award night.",
+  },
+  {
+    src: Image.PresidentColorFul,
+    note: "Landzun members in colourful attire at the palace during a courtesy visit.",
+  },
+  { src: Image.PresidentMembers2, note: groupPhotoNote },
+];
+
+const government: MediaItem[] = [
   {
     src: Image.GovernorBago1,
-    name: "Members of the association presenting the association's document to His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
+    note: "Members of the association presenting the association's document to His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
   },
   {
     src: Image.GovernorBago2,
-    name: "Members of the association in conversation with His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
+    note: "Members of the association in conversation with His Excellency the Executive Governor of Niger State, Alh. Mohammed Umaru Bago, during a courtesy visit.",
   },
   {
     src: Image.FormerGovernorGroup,
-    name: "Members of the association in a group photograph with the former Governor of Niger State, Dr. Mu'azu Babangida Aliyu (Talban Minna).",
+    note: "Members of the association in a group photograph with the former Governor of Niger State, Dr. Mu'azu Babangida Aliyu (Talban Minna).",
   },
 ];
 
-const UmarSandaVideos = [
+const firstPatronNote =
+  "The First Patron, His Royal Highness the late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako, CFR, in interview and at Sallah celebrations.";
+
+const firstPatron: MediaItem[] = [
   {
     src: Image.UmarSandaVideo,
-    note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
-    poster:
-      "https://i.ibb.co/Dg3vgmV/Screenshot-2-11-2024-174813-localhost.jpg",
+    type: "vid",
+    note: firstPatronNote,
+    poster: "https://i.ibb.co/Dg3vgmV/Screenshot-2-11-2024-174813-localhost.jpg",
   },
   {
     src: Image.UmarSandaVideo2,
-    note: `The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako CFR on his interview and sallah celebration`,
-    poster:
-      "https://i.ibb.co/nDs55B2/Screenshot-2-11-2024-174742-localhost.jpg",
+    type: "vid",
+    note: firstPatronNote,
+    poster: "https://i.ibb.co/nDs55B2/Screenshot-2-11-2024-174742-localhost.jpg",
   },
 ];
 
-const etsuYahayaVideos = [
+const secondPatron: MediaItem[] = [
   {
     src: Image.EtsuYahayaVideo,
-    note: `The Etsu Nupe Talking Drum and Praises`,
-    poster:
-      "https://i.ibb.co/VxbXR7R/Screenshot-2-11-2024-174922-localhost.jpg",
+    type: "vid",
+    note: "The Etsu Nupe's talking drum and praises.",
+    poster: "https://i.ibb.co/VxbXR7R/Screenshot-2-11-2024-174922-localhost.jpg",
   },
   {
     src: "https://i.ibb.co/3YZcs8r/etsu-nupe-installation.jpg",
-    note: `The Installation ceremony of HRH Alhaji Yahaya Abubakar CFR as the 13th Etsu Nupe in Bida Niger state on 21st Sept. 2003.`,
-    poster: "",
-    type: "img",
+    note: "The installation ceremony of HRH Alhaji Yahaya Abubakar, CFR, as the 13th Etsu Nupe, Bida, 21 September 2003.",
   },
   {
     src: Image.EtsuYahayaVideo2,
-    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
-    poster:
-      "https://i.ibb.co/s5jfxW8/Screenshot-2-11-2024-174954-localhost.jpg",
+    type: "vid",
+    note: "His Royal Highness the Etsu Nupe Alh. (Dr) Yahaya Abubakar, CFR, at Sallah celebrations.",
+    poster: "https://i.ibb.co/s5jfxW8/Screenshot-2-11-2024-174954-localhost.jpg",
   },
   {
     src: Image.EtsuYahayaVideo3,
-    note: `His Royal Highness, The Etsu Nupe Alh. (Dr) Yahaya Abubakar CFR  on sallah celebration`,
-    poster:
-      "https://i.ibb.co/T0DxW8Q/Screenshot-2-11-2024-175017-localhost.jpg",
+    type: "vid",
+    note: "His Royal Highness the Etsu Nupe Alh. (Dr) Yahaya Abubakar, CFR, at Sallah celebrations.",
+    poster: "https://i.ibb.co/T0DxW8Q/Screenshot-2-11-2024-175017-localhost.jpg",
   },
   {
     src: Image.SingingPraise,
-    note: `The praise singing singing of his royal highness Etsu Nupe Alhaji Dr. Yahaya Abubakar CGFR.`,
-    poster: "",
+    type: "vid",
+    note: "Praise singing for His Royal Highness the Etsu Nupe, Alhaji Dr. Yahaya Abubakar, CFR.",
   },
 ];
 
+const culture: MediaItem[] = [
+  {
+    src: Image.NupeCulture,
+    type: "vid",
+    poster: "https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg",
+  },
+  {
+    src: Image.NupeGirlDancing,
+    type: "vid",
+    poster: "https://i.ibb.co/BZSQjs2/Screenshot-11-11-2024-7526-localhost.jpg",
+  },
+  { src: Image.NupeGirlDancing2, type: "vid" },
+  { src: Image.NupeHistory, type: "vid", note: "A brief origin of the Nupe people." },
+  {
+    src: Image.BeautifulNupeGirl,
+    type: "vid",
+    note: "The traditional dress of a Nupe girl.",
+  },
+];
+
+const tradition: MediaItem[] = [
+  {
+    src: Image.ArtOfNupe,
+    type: "vid",
+    poster: "https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg",
+  },
+  {
+    src: Image.ArtOfNupe2,
+    type: "vid",
+    poster: "https://i.ibb.co/GRSDpDN/Screenshot-11-11-2024-74242-localhost.jpg",
+  },
+  { src: Image.Masaga, type: "vid" },
+  {
+    src: Image.SallahPrayer,
+    type: "vid",
+    note: "Sallah prayers at the Idi praying ground, Bida.",
+  },
+  { src: Image.SpecialReport, type: "vid" },
+];
+
+const rows: Row[] = [
+  {
+    eyebrow: "Archive",
+    title: "From the early years",
+    lede: "Photographs from the association's activities in the 1990s.",
+    items: archive,
+  },
+  {
+    eyebrow: "June 2024",
+    title: "The 40th anniversary",
+    lede: "General meeting and award of certificates of service to the executives, held at CABS, Niger State Polytechnic, Bida, on Saturday 29 June 2024.",
+    items: anniversary,
+  },
+  {
+    eyebrow: "Members",
+    title: "The association at work",
+    lede: "Award nights, courtesy visits and audiences with the Etsu Nupe.",
+    items: inTheField,
+  },
+  {
+    eyebrow: "Government",
+    title: "With the Government of Niger State",
+    items: government,
+  },
+  {
+    eyebrow: "First Grand Patron",
+    title: "HRH Alh. (Dr) Umaru Sanda Ndayako, CFR",
+    items: firstPatron,
+    aspect: "16/10",
+    basis: "md:basis-1/2",
+  },
+  {
+    eyebrow: "Second Grand Patron",
+    title: "HRH Alh. (Dr) Yahaya Abubakar, CFR",
+    items: secondPatron,
+    aspect: "16/10",
+    basis: "md:basis-1/2",
+  },
+  {
+    eyebrow: "Culture",
+    title: "Nupe cultural display",
+    items: culture,
+    aspect: "16/10",
+    basis: "md:basis-1/2",
+  },
+  {
+    eyebrow: "Culture",
+    title: "Art and tradition of the Nupe",
+    items: tradition,
+    aspect: "16/10",
+    basis: "md:basis-1/2",
+  },
+];
+
+function GalleryRow({
+  eyebrow,
+  title,
+  lede,
+  items,
+  aspect = "4/3",
+  basis = "md:basis-1/2 lg:basis-1/3",
+}: Row) {
+  return (
+    <Reveal>
+      <Carousel
+        opts={{ loop: true, align: "start" }}
+        plugins={[
+          Autoplay({
+            delay: 6000,
+            stopOnInteraction: true,
+            stopOnMouseEnter: true,
+          }),
+        ]}
+        className="w-full"
+      >
+        <SectionHeading
+          as="h3"
+          eyebrow={eyebrow}
+          title={title}
+          lede={lede}
+          aside={
+            <div className="flex gap-2">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          }
+        />
+        <CarouselContent className="-ml-6 mt-8">
+          {items.map((item, i) => (
+            <CarouselItem key={i} className={cn("pl-6", basis)}>
+              <MediaExpander {...item} aspect={aspect} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </Reveal>
+  );
+}
+
 export const Gallery = () => {
   return (
-    <Section className="flex flex-col gap-4">
-      <h1 className="text-4xl font-bold text-center">Our Gallery</h1>
-      <Text>
-        Explore the heart of the <b>{appConfigs.name}</b> through our gallery.
-        See Bida's rich heritage, community events, and development projects.
-        Our photos capture cultural celebrations, educational programs, social
-        gatherings, and health initiatives, showcasing our commitment to
-        preserving traditions and fostering community spirit.
-      </Text>
-      <br />
-      <br />
-      <div className="flex flex-col gap-5">
-        <div>
-          <Text className="font-semibold"></Text>
-          <br />
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {images_of_1990.map((_, i) => (
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
-                  <MediaExpander
-                    note={_.note || ""}
-                    src={_.src}
-                    type={_.type as "img"}
-                    className={i === 2 ? "-rotate-90" : ""}
-                  >
-                    <Img
-                      src={_.src}
-                      alt={`Image-${i}`}
-                      className={cn("md:h-[600px] h-[300px] w-full")}
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 -ml-2" />
-            <CarouselNext className="right-0 mr-0" />
-          </Carousel>
-        </div>
+    <div id="gallery" className="border-y border-border bg-brand-paper-deep/60">
+      <Section className="py-20 md:py-28">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Gallery"
+            title="Bida, in pictures and film"
+            lede="Cultural celebrations, award nights, courtesy visits and the association's own history — as recorded by its members over four decades."
+          />
+        </Reveal>
 
-        <div>
-          <Text className="font-semibold">
-            Memories from the 40th Anniversary,General Meeting and Award of
-            Certificate of Service to the Executives held at CABS, Niger State
-            Polytechnic Bida, on Saturday, June 29th, 2024
-          </Text>
-          <br />
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {galleries.map((_, i) => (
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={i}>
-                  <MediaExpander src={_.src} type={_.type as "img"}>
-                    <Img
-                      src={_.src}
-                      alt={`Image-${i}`}
-                      className="md:h-[600px] h-[300px] w-full"
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 -ml-2" />
-            <CarouselNext className="right-0 mr-0" />
-          </Carousel>
-        </div>
+        <div className="mt-16 space-y-20 md:space-y-28">
+          {rows.slice(0, 4).map((row) => (
+            <GalleryRow key={row.title} {...row} />
+          ))}
 
-        <div>
-          <h1 className="text-4xl font-bold text-center">
-            Some Pictures of {appConfigs.name} members.
-          </h1>
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2000 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {[
-                Image.President1,
-                Image.President2,
-                Image.President4,
-                Image.President6,
-                Image.President7,
-                Image.President8,
-                Image.PresidentEtsu,
-                Image.PresidentGroup,
-                Image.PresidentMembers,
-                Image.PresidentEmir,
-                Image.PresidentColorFul,
-                Image.PresidentMembers2,
-              ].map((_, i) => (
-                <CarouselItem className="md:basis-1 lg:basis-1/2 mt-3" key={i}>
-                  <MediaExpander
-                    name={
-                      [
-                        "",
-                        "Shaba Nupe Abdulmalik Ndayako and prof. Sheikh abdullah Sitted during the award night in federal polytecnic Bida.",
-                        "",
-                        "Dr Muhammad Daniya giving a speech during an award Night in federal polytecnic Bida.",
-                        "",
-                        "",
-                        "President Alh. Usman B. Ibrahim delivery his keynote address to his Royal Highness Alh. Dr. Yahaya Abubakar in his wadata palace Bida.",
-                        "President Abdullahi N. Aliyu with other members of the association in a group photograph with his Royal Highness Alh. Dr. Umaru Sanda Ndayako During and award night in federal polytecnic Bida.",
-                        "President and other members of the association all sitted before the emir in his wadata palace Bida.",
-                        //"",
-                        "His Royal Highness Alh. Dr. Umaru Sanda Ndayako CFR and chairman of the traditional rulers in Niger State giving a speech to the landzun members during an award night",
-                        "Landzun members in their colorful picture at the palace during their coutesy visit",
-                        "President Abdullahi N. Aliyu with other members of the association in a group photograph with his Royal Highness Alh. Dr. Umaru Sanda Ndayako During and award night in federal polytecnic Bida.",
-                      ][i]
-                    }
-                    src={_}
-                    type="img"
-                  >
-                    <Img src={_} className="h-[25rem] w-full" />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-
-        <div>
-          <h1 className="text-4xl font-bold text-center">
-            {appConfigs.name} With The Government Of Niger State
-          </h1>
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2500 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {governmentVisits.map((_, i) => (
-                <CarouselItem className="md:basis-1 lg:basis-1/2 mt-3" key={i}>
-                  <MediaExpander name={_.name} src={_.src} type="img">
-                    <Img src={_.src} className="h-[25rem] w-full" />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 -ml-2" />
-            <CarouselNext className="right-0 mr-0" />
-          </Carousel>
-        </div>
-
-        <div>
-          <h1 className="text-2xl font-bold text-center">
-            The First Patron, His Royal Highness, The Late Etsu Nupe Alh. (Dr)
-            Umaru Sanda Ndayako CFR
-          </h1>
-          <div className="flex items-center flex-col gap-4">
-            <Carousel
-              className="w-full"
-              opts={{ loop: true }}
-              plugins={[Autoplay({ delay: 2000 })]}
-            >
-              <CarouselContent className="w-full cursor-pointer">
-                {UmarSandaVideos.map((_, i) => (
-                  <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                    <MediaExpander src={_.src} type="vid">
-                      <video
-                        onPlay={() => {}}
-                        src={_.src}
-                        controls={false}
-                        className="h-[25rem] w-full"
-                        poster={_.poster}
-                      />
-                    </MediaExpander>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-center">
-            The Second Patron, His Royal Highness, The Etsu Nupe Alh. (Dr)
-            Yahaya Abubakar CFR
-          </h1>
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2000 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {etsuYahayaVideos.map((_, i) => (
-                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander src={_.src} type="vid" name={_.note}>
-                    <video
-                      onPlay={() => {}}
-                      src={_.src}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                      poster={_.poster}
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold text-center">The History Of Bida</h1>
-          <br />
-          <Text>
-            A documentary on the history of Bida, the home of the Nupe people
-            and the community the <b>{appConfigs.name}</b> was founded to serve.
-          </Text>
-          <br />
-          <div className="w-full md:w-2/3 mx-auto cursor-pointer">
-            <MediaExpander
-              src={Image.HistoryOfBida}
-              type="vid"
-              name="The History of Bida"
-            >
-              <video
-                onPlay={() => {}}
+          <Reveal>
+            <SectionHeading
+              as="h3"
+              eyebrow="Heritage"
+              title="The history of Bida"
+              lede="A documentary on the history of Bida, the home of the Nupe people and the community the association was founded to serve."
+            />
+            <div className="mt-8">
+              <MediaExpander
                 src={Image.HistoryOfBida}
-                controls={false}
-                className="h-[25rem] w-full rounded-lg"
+                type="vid"
+                name="The History of Bida"
+                aspect="16/9"
+                hideCaption
               />
-            </MediaExpander>
-          </div>
-        </div>
+            </div>
+          </Reveal>
 
-        <div>
-          <h1 className="text-4xl font-bold text-center">
-            The Cultural Display Of Nupe People
-          </h1>
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2400 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {[
-                Image.NupeCulture,
-                Image.NupeGirlDancing,
-                Image.NupeGirlDancing2,
-                Image.NupeHistory,
-                Image.BeautifulNupeGirl,
-              ].map((_, i) => (
-                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander
-                    name={
-                      [
-                        "",
-                        "",
-                        "",
-                        "A brief origin of Nupe People",
-                        "A Typical Nupe Girl Cultural Dressing",
-                      ][i]
-                    }
-                    src={_}
-                    type="vid"
-                  >
-                    <video
-                      onPlay={() => {}}
-                      src={_}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                      poster={
-                        [
-                          "https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg",
-                          "https://i.ibb.co/BZSQjs2/Screenshot-11-11-2024-7526-localhost.jpg",
-                          "",
-                          "",
-                          "",
-                        ][i]
-                      }
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          {rows.slice(4).map((row) => (
+            <GalleryRow key={row.title} {...row} />
+          ))}
         </div>
-        <div>
-          <h1 className="text-4xl font-bold text-center">
-            The Art And Tradition Of Nupe People
-          </h1>
-          <Carousel
-            className="w-full"
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 2200 })]}
-          >
-            <CarouselContent className="w-full cursor-pointer">
-              {[
-                Image.ArtOfNupe,
-                Image.ArtOfNupe2,
-                Image.Masaga,
-                Image.SallahPrayer,
-                Image.SpecialReport,
-              ].map((_, i) => (
-                <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                  <MediaExpander
-                    name={
-                      [
-                        "",
-                        "",
-                        "",
-                        "Sallah prayers during sallah day at idi praying ground in Bida.",
-                      ][i]
-                    }
-                    src={_}
-                    type="vid"
-                  >
-                    <video
-                      onPlay={() => {}}
-                      src={_}
-                      controls={false}
-                      className="h-[25rem] w-full"
-                      poster={
-                        [
-                          "https://i.ibb.co/V9YbVP6/Screenshot-2-11-2024-17519-localhost.jpg",
-                          "https://i.ibb.co/GRSDpDN/Screenshot-11-11-2024-74242-localhost.jpg",
-                          "",
-                          "",
-                          "",
-                        ][i]
-                      }
-                    />
-                  </MediaExpander>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-      </div>
-    </Section>
+      </Section>
+    </div>
   );
 };

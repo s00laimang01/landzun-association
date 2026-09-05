@@ -1,197 +1,122 @@
-import { Img } from "react-image";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { activities, appConfigs, purposes } from "@/lib/data";
 import Images from "@/lib/imports";
-import { appConfigs } from "@/lib/data";
-import { Section } from "./section";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import { MediaExpander } from "./media-expander";
+import { Seal } from "./seal";
+import { Reveal, Section, SectionHeading } from "./section";
+
+const projects = [
+  {
+    src: Images.Clinic,
+    name: "The clinic at Bangaie, Bida",
+    note: "Self-help project: the health clinic built and equipped by the association at Bangaie ward, Bida, in 1983.",
+  },
+  {
+    src: Images.Land,
+    name: "Site of the National Secretariat",
+    note: `The permanent site secured along ${appConfigs.permanentSite}, to be developed as the association's National Secretariat and headquarters.`,
+  },
+];
 
 export default function AboutUs() {
   return (
-    <section id="about-us" className="py-21">
-      <Section>
-        <h2 className="text-4xl font-bold text-center mb-8">
-          About Our Community
-        </h2>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <Img
-              src={Images.LanzdunDevLogo}
-              alt="Community gathering"
-              width={600}
-              className="rounded-lg shadow-lg -rotate-90"
-            />
+    <div id="about" className="border-y border-border bg-brand-paper-deep/60">
+      <Section className="py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-24">
+              <Reveal>
+                <Seal className="mb-8 h-36 w-36" decorative={false} />
+                <SectionHeading
+                  eyebrow="Who we are"
+                  title="A non-governmental association of the indigenes of Bida."
+                />
+                <p className="prose-lada mt-6">
+                  Formed by the indigenes of Bida town and those who have the
+                  interest of the town at heart, the {appConfigs.name} (
+                  {appConfigs.shortName}) was launched on {appConfigs.foundedOn}
+                  .
+                </p>
+              </Reveal>
+            </div>
           </div>
 
-          <div>
-            <Tabs defaultValue="profile" className="w-full">
-              <TabsList className="grid w-fit grid-cols-3">
-                <TabsTrigger value="mission">Our Mission</TabsTrigger>
-                <TabsTrigger value="vision">Our Vision</TabsTrigger>
-                <TabsTrigger value="profile">Our Profile</TabsTrigger>
-              </TabsList>
-              <TabsContent value="mission" className="mt-4">
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-semibold mb-2">Our Mission</h3>
-                    <p className="text-gray-600">
-                      Our mission is to promote social and cultural
-                      understanding among our members, the Bida community, and
-                      the wider Nigerian society. We believe that through unity
-                      and collaboration, we can create a more harmonious and
-                      prosperous community.
-                    </p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="vision" className="mt-4">
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
-                    <p className="text-gray-600">
-                      Welcome to the <b>{appConfigs.name}</b>, a collective from
-                      the vibrant Bida township. Founded to enhance our
-                      society's social and cultural fabric, we celebrate Bida's
-                      rich heritage through cultural events and educational
-                      programs, ensuring our traditions are passed down. We
-                      foster a sense of belonging and unity by organizing social
-                      events that build strong relationships. Committed to
-                      Bida's development, we focus on improving infrastructure,
-                      education, healthcare, and other vital aspects of
-                      community life. Recognizing education as a cornerstone, we
-                      offer scholarships, mentorship, and support for students
-                      and young professionals. Additionally, we promote health
-                      and wellness through awareness programs, health camps, and
-                      support for medical facilities.
-                    </p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="profile" className="mt-4">
-                <Card>
-                  <CardContent className="pt-6">
-                    <h3 className="text-2xl font-semibold mb-2">Our Profile</h3>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: `<h1>Profile of Landzun Development Association (LADA)</h1>
-    
-    <h2 class="font-bold text-xl">1.0 Overview</h2>
-    <p>Landzun Development Association (LADA) is a Non-Governmental Organization formed by the indigenes of Bida Town and those who have the interest of the town at heart with the following purposes:</p>
-    <ol>
-        <li>To promote social, cultural, and economic integration among its members, the Bida community, and the Nigerian society in general.</li>
-        <li>To foster unity and understanding amongst the members, Bida community, and other communities in the state and the country at large.</li>
-        <li>To undertake self-help projects.</li>
-    </ol>
-    <p>The association was launched on 21st August 1982. It has not less than fourteen members serving as National Executive Committee (NEC) members who undertake the day-to-day running of the Association's activities. The NEC members are elected by the members during the convention/general assembly of the Association.</p>
-    <p>The President or the Deputy President chairs the NEC meetings. Additionally, the Association has a Board of Trustees whose members are registered with the Corporate Affairs Commission. His Royal Highness, the Etsu Nupe, serves as the Grand Patron of the Association.</p>
-    
-    <h2 class="font-bold text-xl">2.0 Some Activities Undertaken by the Association</h2>
-    <ol>
-        <li>Constructed and equipped a health clinic at Bangaie ward, Bida.</li>
-        <li>Supplied food provisions to patients admitted at Bida FMC/General Hospital.</li>
-        <li>Appealed to various governments for the provision of development projects for the town and its environs.</li>
-        <li>Embarked on social activities such as radio and television advocacy and sensitization on national programs (e.g., census and general election issues) and addressing social ills within the community.</li>
-        <li>Established a functional, registered Cooperative Society.</li>
-    </ol>
-    
-    <h2 class="font-bold text-xl">3.0 Address</h2>
-    <p>The Association has secured a permanent site along Bangaie Road, Bida, to be developed as its National Secretariat and Headquarters. In the interim, the Headquarters is located at Banma, Kota Woro, Bida, Niger State.</p>`,
-                      }}
-                      className="text-gray-600"
-                    />
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
+          <div className="space-y-16 lg:col-span-8">
+            <Reveal>
+              <h3 className="eyebrow mb-6">Our purposes</h3>
+              <ol className="divide-y divide-border border-y border-border">
+                {purposes.map((p, i) => (
+                  <li key={i} className="flex gap-6 py-5 md:gap-10">
+                    <span className="font-serif text-2xl leading-none text-brand-red md:text-3xl">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="prose-lada text-foreground">{p}</p>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+
+            <Reveal>
+              <h3 className="eyebrow mb-6">How we are run</h3>
+              <div className="prose-lada max-w-none">
+                <p>
+                  Not fewer than fourteen members serve on the National
+                  Executive Committee, which undertakes the day-to-day running
+                  of the association's activities. They are elected by the
+                  members at the convention and general assembly, and the
+                  President or Deputy President chairs their meetings.
+                </p>
+                <p>
+                  The association also has a Board of Trustees registered with
+                  the Corporate Affairs Commission. His Royal Highness the Etsu
+                  Nupe serves as Grand Patron.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <h3 className="eyebrow mb-6">What we have done</h3>
+              <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
+                {activities.map((a) => (
+                  <li key={a.title} className="border-t border-border pt-4">
+                    <h4 className="font-serif text-xl">{a.title}</h4>
+                    <p className="prose-lada mt-2">{a.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal>
+              <div className="grid gap-8 sm:grid-cols-2">
+                {projects.map((p) => (
+                  <MediaExpander key={p.name} {...p} />
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <h3 className="eyebrow mb-6">Where to find us</h3>
+              <dl className="grid gap-8 sm:grid-cols-2">
+                <div>
+                  <dt className="text-sm text-muted-foreground">
+                    Interim headquarters
+                  </dt>
+                  <dd className="mt-1 font-serif text-xl">
+                    {appConfigs.interimAddress}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm text-muted-foreground">
+                    Permanent site
+                  </dt>
+                  <dd className="mt-1 font-serif text-xl">
+                    {appConfigs.permanentSite}
+                  </dd>
+                </div>
+              </dl>
+            </Reveal>
           </div>
-        </div>
-
-        <div className="w-full flex flex-col items-center justify-center mt-6 space-y-3">
-          <h2 className="text-center font-bold text-2xl">
-            This is part of Landzun River that passes across Bida town and from
-            where the association got it's name.
-          </h2>
-          <div className="md:max-w-5xl m-auto w-full md:j">
-            <Img
-              src={Images.LandzunRiver}
-              className="rounded-md w-full md:h-[40rem]"
-            />
-          </div>
-        </div>
-
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8">What We Do</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Community Events",
-                description:
-                  "We organize regular events to bring our community together, fostering connections and celebrating our diversity.",
-                icon: "🎉",
-              },
-              {
-                title: "Education Programs",
-                description:
-                  "Our learning initiatives cater to all ages, promoting personal growth and skill development within the community.",
-                icon: "📚",
-              },
-              {
-                title: "Environmental Projects",
-                description:
-                  "We lead various eco-friendly projects to create a sustainable and green living environment for all residents.",
-                icon: "🌱",
-              },
-            ].map((item, index) => (
-              <Card key={index} className="overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                  <p className="text-gray-600">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <Carousel
-          className="w-full mt-10"
-          opts={{ loop: true }}
-          plugins={[Autoplay({ delay: 2000 })]}
-        >
-          <CarouselContent className="w-full cursor-pointer">
-            {[Images.Clinic, Images.Land].map((_, i) => (
-              <CarouselItem className="md:basis-1 lg:basis-1/2" key={i}>
-                <MediaExpander
-                  src={_}
-                  type="img"
-                  name={
-                    [
-                      "SELF-HELP PROJECT:      THE CLINIC BUILT AND EQUIPPED BY LANDZUN  DEVELOPMENT ASSOCIATION AT BANGAIE, BIDA IN 1983.",
-                      "Proposed site of National       Secretariat of LANDZUN DEVELOPMENT ASSOCIATION, BIDA.".toUpperCase(),
-                    ][i]
-                  }
-                >
-                  <Img
-                    src={_}
-                    alt={`Image-${i}`}
-                    className="aspect-[5/3] rounded-lg"
-                  />
-                </MediaExpander>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-
-        <div className="text-center mt-12">
-          <Button size="lg" className="rounded-full">
-            Join Our Community
-          </Button>
         </div>
       </Section>
-    </section>
+    </div>
   );
 }

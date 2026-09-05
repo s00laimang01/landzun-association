@@ -1,22 +1,14 @@
+import { ReactNode } from "react";
+import { Copy } from "lucide-react";
+import { Button, buttonVariants, type ButtonProps } from "@/components/ui/button";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { CreditCard, Copy, Info } from "lucide-react";
+  MorphContent,
+  MorphDialog,
+  MorphTrigger,
+} from "@/components/ui/morph-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { appConfigs } from "@/lib/data";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 interface AccountDetails {
   bankName: string;
@@ -27,14 +19,14 @@ interface AccountDetails {
 
 const accountDetails: AccountDetails[] = [
   {
-    bankName: "Union Bank Account",
+    bankName: "Union Bank",
     accountName: appConfigs.name,
     accountNumber: "0011990973",
     swiftCode: "CMBKUS33",
   },
   {
     bankName: "First Bank",
-    accountName: appConfigs.name + "Cooperative Account",
+    accountName: `${appConfigs.name} Cooperative Account`,
     accountNumber: "2016504587",
     swiftCode: "CITIUS33",
   },
@@ -46,81 +38,81 @@ const accountDetails: AccountDetails[] = [
   },
 ];
 
-export function DonationDialog() {
+/** A button that morphs into the bank-details panel. */
+export function DonationDialog({
+  children = "Donate",
+  className,
+  variant,
+  size,
+}: {
+  children?: ReactNode;
+  className?: string;
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
+}) {
   const { toast } = useToast();
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: string, bank: string) => {
     navigator.clipboard.writeText(text).then(() => {
       toast({
-        title: "Copied to clipboard",
-        description: "The account number has been copied to your clipboard.",
+        title: "Account number copied",
+        description: `${bank} · ${text}`,
       });
     });
   };
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="default" className="rounded-full">
-          Donate Now
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px]">
-        <DialogHeader>
-          <DialogTitle>Donation Account Details</DialogTitle>
-          <DialogDescription>
-            Thank you for considering a donation to our community. Your support
-            makes a difference!
-          </DialogDescription>
-        </DialogHeader>
-        <Carousel className="w-full max-w-[90%] mx-auto">
-          <CarouselContent>
-            {accountDetails.map((account, index) => (
-              <CarouselItem key={index}>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <CreditCard className="h-4 w-4" />
-                    <span className="font-medium col-span-3">
-                      {account.bankName}
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <span className="font-medium">Name:</span>
-                    <span className="col-span-3">{account.accountName}</span>
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <span className="font-medium">Account:</span>
-                    <span className="col-span-2">{account.accountNumber}</span>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={() => copyToClipboard(account.accountNumber)}
-                      aria-label="Copy account number"
-                    >
-                      <Copy className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <span className="font-medium">SWIFT:</span>
-                    <span className="col-span-3">{account.swiftCode}</span>
-                  </div>
+    <MorphDialog>
+      <MorphTrigger className={cn(buttonVariants({ variant, size }), className)}>
+        {children}
+      </MorphTrigger>
+
+      <MorphContent
+        title="Donate by bank transfer"
+        description="Bank accounts of the association for donations."
+        className="max-w-xl"
+      >
+        <div className="p-6 sm:p-8">
+          <div aria-hidden="true">
+            <p className="eyebrow">Support the association</p>
+            <p className="mt-2 font-serif text-3xl">Donate by bank transfer</p>
+            <p className="prose-lada mt-3">
+              Transfers may be made to any of the association's accounts
+              below. For questions about a donation, please contact the finance
+              secretary.
+            </p>
+          </div>
+
+          <ul className="mt-6 divide-y divide-border border-y border-border">
+            {accountDetails.map((account) => (
+              <li key={account.accountNumber} className="py-4">
+                <p className="eyebrow">{account.bankName}</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {account.accountName}
+                </p>
+                <div className="mt-2 flex items-center justify-between gap-4">
+                  <p className="font-serif text-2xl tabular-nums tracking-wide">
+                    {account.accountNumber}
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      copyToClipboard(account.accountNumber, account.bankName)
+                    }
+                  >
+                    <Copy />
+                    Copy
+                  </Button>
                 </div>
-              </CarouselItem>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  SWIFT {account.swiftCode} · for international transfers
+                </p>
+              </li>
             ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-        <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-          <Info className="h-4 w-4" />
-          <p>For international transfers, please use the SWIFT code.</p>
+          </ul>
         </div>
-        <div className="bg-muted p-3 rounded-md text-sm">
-          <strong>Note:</strong> Your donation helps us continue our community
-          development efforts. We appreciate your generosity and support. For
-          any questions about donations, please contact our finance team.
-        </div>
-      </DialogContent>
-    </Dialog>
+      </MorphContent>
+    </MorphDialog>
   );
 }
