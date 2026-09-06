@@ -13,7 +13,9 @@ const projects = [
   {
     src: Images.Land,
     name: "Site of the National Secretariat",
-    note: `The permanent site secured along ${appConfigs.permanentSite}, to be developed as the association's National Secretariat and headquarters.`,
+    note: `The permanent site secured along ${appConfigs.permanentSite}, marked with the association's beacon, to be developed as its National Secretariat and headquarters.`,
+    // Portrait photo: keep the "LADA PLOT" beacon in the 4:3 crop.
+    imgClassName: "object-[50%_62%]",
   },
 ];
 

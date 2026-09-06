@@ -34,7 +34,7 @@ import BeautifulNupeGirl from "../assets/b-nupe-girl.mp4";
 import SallahPrayer from "../assets/sallah-prayers.mp4";
 import SpecialReport from "../assets/special-report.mp4";
 import Clinic from "../assets/lada-clinic.jpg";
-import Land from "../assets/lada-land.jpg";
+import Land from "../assets/lada-plot.jpg";
 import SingingPraise from "../assets/singing-praise.mp4";
 import LandzunRiver from "../assets/landzun-river.jpg";
 import President8 from "../assets/president-8.jpg";
