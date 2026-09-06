@@ -80,6 +80,13 @@ export function MorphDialog({
   );
 }
 
+/**
+ * An additional, non-morphing opener (e.g. a "Watch" button next to a
+ * thumbnail). Only one element per dialog should carry the layoutId, so this
+ * one deliberately does not.
+ */
+export const MorphOpen = DialogPrimitive.Trigger;
+
 type MotionButtonProps = ComponentProps<typeof motion.button>;
 
 /** The element that morphs into the panel. Renders a real button. */

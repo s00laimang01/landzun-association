@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { History } from "@/components/history";
 import AboutUs from "@/components/about-us";
 import { Patrons } from "@/components/patrons";
 import MembersSection from "@/components/members";
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <History />
         <AboutUs />
         <Patrons />
         <MembersSection />

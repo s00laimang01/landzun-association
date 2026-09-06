@@ -2,6 +2,7 @@ import Image from "../lib/imports";
 
 export const navLinks = [
   { name: "About", path: "#about" },
+  { name: "History", path: "#history" },
   { name: "Patrons", path: "#patrons" },
   { name: "Executives", path: "#executives" },
   { name: "Gallery", path: "#gallery" },

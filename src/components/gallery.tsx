@@ -318,29 +318,7 @@ export const Gallery = () => {
         </Reveal>
 
         <div className="mt-16 space-y-20 md:space-y-28">
-          {rows.slice(0, 4).map((row) => (
-            <GalleryRow key={row.title} {...row} />
-          ))}
-
-          <Reveal>
-            <SectionHeading
-              as="h3"
-              eyebrow="Heritage"
-              title="The history of Bida"
-              lede="A documentary on the history of Bida, the home of the Nupe people and the community the association was founded to serve."
-            />
-            <div className="mt-8">
-              <MediaExpander
-                src={Image.HistoryOfBida}
-                type="vid"
-                name="The History of Bida"
-                aspect="16/9"
-                hideCaption
-              />
-            </div>
-          </Reveal>
-
-          {rows.slice(4).map((row) => (
+          {rows.map((row) => (
             <GalleryRow key={row.title} {...row} />
           ))}
         </div>

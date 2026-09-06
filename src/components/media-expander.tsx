@@ -5,6 +5,7 @@ import {
   MorphContent,
   MorphDialog,
   MorphImage,
+  MorphOpen,
   MorphTrigger,
 } from "./ui/morph-dialog";
 import { cn } from "@/lib/utils";
@@ -31,6 +32,8 @@ export const MediaExpander: FC<
     imgClassName?: string;
     /** Keep the caption for the dialog only (when the page already shows it). */
     hideCaption?: boolean;
+    /** An extra opener rendered under the figure, e.g. a "Watch" button. */
+    action?: ReactNode;
   }
 > = ({
   type = "img",
@@ -42,6 +45,7 @@ export const MediaExpander: FC<
   className,
   imgClassName,
   hideCaption = false,
+  action,
 }) => {
   const caption = name || note;
   const accessibleName =
@@ -77,6 +81,11 @@ export const MediaExpander: FC<
           <figcaption className="mt-3 line-clamp-3 text-sm leading-snug text-muted-foreground">
             {caption}
           </figcaption>
+        )}
+        {action && (
+          <div className="mt-6">
+            <MorphOpen asChild>{action}</MorphOpen>
+          </div>
         )}
       </figure>
 
