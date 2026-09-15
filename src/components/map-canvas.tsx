@@ -1,7 +1,17 @@
 import { useEffect, useRef } from "react";
-import { Map as MapLibreMap, Marker, NavigationControl } from "maplibre-gl";
+import {
+  Map as MapLibreMap,
+  Marker,
+  NavigationControl,
+  setWorkerUrl,
+} from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+// MapLibre resolves its worker relative to its own module URL, which breaks
+// once Vite bundles it. Let Vite bundle the worker and hand over the URL.
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { useReducedMotion } from "framer-motion";
+
+setWorkerUrl(maplibreWorkerUrl);
 
 /**
  * A tilted 3D satellite view of one location. Loaded lazily by SiteMap.
@@ -35,7 +45,9 @@ export default function MapCanvas({
               "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
             ],
             tileSize: 256,
-            maxzoom: 19,
+            // Esri's imagery for Bida stops at 17; overzoom rather than
+            // show "data not available" tiles.
+            maxzoom: 17,
             attribution:
               "Imagery © Esri, Maxar, Earthstar Geographics · Terrain © AWS / Mapzen",
           },
@@ -48,8 +60,40 @@ export default function MapCanvas({
             encoding: "terrarium",
             maxzoom: 15,
           },
+          // OpenStreetMap building footprints (Bida is well mapped: ~15k
+          // buildings within 2 km of the site), served keyless by OpenFreeMap.
+          openmaptiles: {
+            type: "vector",
+            url: "https://tiles.openfreemap.org/planet",
+            attribution: "Buildings © OpenStreetMap contributors · OpenFreeMap",
+          },
         },
-        layers: [{ id: "satellite", type: "raster", source: "satellite" }],
+        layers: [
+          { id: "satellite", type: "raster", source: "satellite" },
+          {
+            id: "buildings-3d",
+            type: "fill-extrusion",
+            source: "openmaptiles",
+            "source-layer": "building",
+            minzoom: 14,
+            paint: {
+              "fill-extrusion-color": "#d9cdb9",
+              // OSM rarely records heights here; 5 m reads as a single storey.
+              "fill-extrusion-height": [
+                "coalesce",
+                ["get", "render_height"],
+                5,
+              ],
+              "fill-extrusion-base": [
+                "coalesce",
+                ["get", "render_min_height"],
+                0,
+              ],
+              "fill-extrusion-opacity": 0.9,
+              "fill-extrusion-vertical-gradient": true,
+            },
+          },
+        ],
         terrain: { source: "terrain", exaggeration: 1.4 },
         sky: {
           "sky-color": "#bfd3e6",
@@ -61,16 +105,18 @@ export default function MapCanvas({
         },
       },
       center: [lng, lat],
-      zoom: reduceMotion ? 16.2 : 13.5,
-      pitch: 60,
+      zoom: reduceMotion ? 18 : 14,
+      pitch: reduceMotion ? 68 : 60,
       bearing: -25,
-      maxPitch: 75,
+      maxPitch: 80,
       attributionControl: { compact: true },
       // A page-embedded map must not hijack the scroll wheel.
       cooperativeGestures: true,
     });
 
     map.addControl(new NavigationControl({ visualizePitch: true }), "top-right");
+    // Handle for tests and the browser console (e.g. queryRenderedFeatures).
+    (container.current as HTMLDivElement & { __map?: MapLibreMap }).__map = map;
 
     const pin = document.createElement("div");
     pin.className = "site-pin";
@@ -103,10 +149,10 @@ export default function MapCanvas({
     map.once("load", () => {
       if (reduceMotion) return;
       map.flyTo({
-        zoom: 16.2,
-        pitch: 62,
+        zoom: 18,
+        pitch: 68,
         bearing: -15,
-        duration: 3200,
+        duration: 3600,
         essential: true,
       });
       map.once("moveend", () => {
