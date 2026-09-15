@@ -18,6 +18,12 @@ export const appConfigs = {
   foundedOn: "21 August 1982",
   interimAddress: "Banma, Kota Woro, Bida, Niger State",
   permanentSite: "Bangaie Road, Bida",
+  /** Location of the permanent site (from the association's Apple Maps pin). */
+  site: {
+    lat: 9.084552,
+    lng: 6.012161,
+    appleMapsUrl: "https://maps.apple/p/x8SI7dpWsLA9L8",
+  },
 };
 
 export const purposes = [

@@ -113,6 +113,12 @@ export default function AboutUs() {
                   <dd className="mt-1 font-serif text-xl">
                     {appConfigs.permanentSite}
                   </dd>
+                  <a
+                    href="#site-map"
+                    className="mt-2 inline-block text-sm text-brand-red underline-offset-4 hover:underline"
+                  >
+                    View the site on the map
+                  </a>
                 </div>
               </dl>
             </Reveal>
