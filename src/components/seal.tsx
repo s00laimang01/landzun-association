@@ -20,7 +20,7 @@ export const Seal: FC<{ className?: string; decorative?: boolean }> = ({
     <img
       src={Images.LanzdunDevLogo}
       alt={decorative ? "" : `Seal of the ${appConfigs.name}`}
-      className="h-full w-full scale-[1.16] object-cover object-[52%_50%] mix-blend-multiply"
+      className="h-full w-full scale-[1.16] object-cover object-[50%_0%] mix-blend-multiply"
     />
   </span>
 );
