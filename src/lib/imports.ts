@@ -20,6 +20,7 @@ import FormarEmirImage from "../assets/grand-patrons-of-landzun-dev-two.jpg";
 import LanzdunDevLogo from "../assets/LandzunDevLogo.jpg";
 import UmarSandaVideo from "../assets/umar-sanda-video.mp4";
 import UmarSandaVideo2 from "../assets/umar-sanda-video2.mp4";
+import UmarSandaPraiseSong from "../assets/umar-sanda-praise-song.mp4";
 import EtsuYahayaVideo from "../assets/etsu-yahaya-video.mp4";
 import EtsuYahayaVideo2 from "../assets/etsu-yahaya-video2.mp4";
 import EtsuYahayaVideo3 from "../assets/etsu-yahaya-video3.mp4";
@@ -35,7 +36,10 @@ import SallahPrayer from "../assets/sallah-prayers.mp4";
 import SpecialReport from "../assets/special-report.mp4";
 import Clinic from "../assets/lada-clinic.jpg";
 import Land from "../assets/lada-plot.jpg";
+import SitePanoramaWide from "../assets/site-panorama-wide.jpg";
+import SitePanoramaWall from "../assets/site-panorama-wall.jpg";
 import SingingPraise from "../assets/singing-praise.mp4";
+import PalaceReconstruction from "../assets/palace-reconstruction.mp4";
 import LandzunRiver from "../assets/landzun-river.jpg";
 import President8 from "../assets/president-8.jpg";
 import President7 from "../assets/president-7.jpg";
@@ -66,6 +70,7 @@ import GovernorBago1 from "../assets/governor-bago-1.jpg";
 import GovernorBago2 from "../assets/governor-bago-2.jpg";
 import FormerGovernorGroup from "../assets/former-governor-group.jpg";
 import HistoryOfBida from "../assets/history-of-bida.mp4";
+import NupeDayHistory from "../assets/nupe-day-history.mp4";
 
 
 
@@ -92,6 +97,7 @@ export default {
   LanzdunDevLogo,
   UmarSandaVideo,
   UmarSandaVideo2,
+  UmarSandaPraiseSong,
   EtsuYahayaVideo,
   EtsuYahayaVideo2,
   EtsuYahayaVideo3,
@@ -109,6 +115,7 @@ export default {
   Clinic,
   LandzunRiver,
   SingingPraise,
+  PalaceReconstruction,
   President1,
   President2,
   President4,
@@ -136,5 +143,8 @@ export default {
     GovernorBago1,
     GovernorBago2,
     FormerGovernorGroup,
-    HistoryOfBida
+    HistoryOfBida,
+    NupeDayHistory,
+    SitePanoramaWide,
+    SitePanoramaWall
 };

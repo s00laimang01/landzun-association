@@ -123,6 +123,11 @@ const firstPatronNote =
 
 const firstPatron: MediaItem[] = [
   {
+    src: Image.UmarSandaPraiseSong,
+    type: "vid",
+    note: "The praise singer of the First Patron, singing for the late Emir of Bida, His Royal Highness the Etsu Nupe Alh. (Dr) Umaru Sanda Ndayako, CFR.",
+  },
+  {
     src: Image.UmarSandaVideo,
     type: "vid",
     note: firstPatronNote,
@@ -163,6 +168,11 @@ const secondPatron: MediaItem[] = [
     src: Image.SingingPraise,
     type: "vid",
     note: "Praise singing for His Royal Highness the Etsu Nupe, Alhaji Dr. Yahaya Abubakar, CFR.",
+  },
+  {
+    src: Image.PalaceReconstruction,
+    type: "vid",
+    note: "The reconstruction of the outer compound of the Emir's palace, Bida.",
   },
 ];
 
