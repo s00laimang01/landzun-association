@@ -174,6 +174,11 @@ const secondPatron: MediaItem[] = [
     type: "vid",
     note: "The reconstruction of the outer compound of the Emir's palace, Bida.",
   },
+  {
+    src: Image.PalaceInside,
+    type: "vid",
+    note: "Inside the Emir's palace, Bida: the new look of the Etsu Nupe's palace. Video: @bida.location1111 on TikTok.",
+  },
 ];
 
 const culture: MediaItem[] = [

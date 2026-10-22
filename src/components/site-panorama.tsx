@@ -39,6 +39,9 @@ const views: View[] = [
   },
 ];
 
+const { lengthM, widthM } = appConfigs.site;
+const plotArea = Math.round(lengthM * widthM).toLocaleString("en-NG");
+
 /**
  * Full-bleed, cinematic panorama of the site. The photo is wrapped around the
  * inside of a cylinder and rendered with WebGL, so turning to look around
@@ -58,6 +61,22 @@ export function SitePanorama() {
               The plot as you would see it standing in the middle of it. Drag
               or swipe to turn and look around.
             </p>
+            <dl className="mt-8 grid max-w-md grid-cols-3 gap-6 border-t border-brand-paper/15 pt-6">
+              {[
+                ["Length", `${lengthM} m`],
+                ["Width", `${widthM} m`],
+                ["Area", `${plotArea} m²`],
+              ].map(([term, value]) => (
+                <div key={term}>
+                  <dt className="text-[0.7rem] uppercase tracking-[0.2em] text-brand-paper/60">
+                    {term}
+                  </dt>
+                  <dd className="mt-1 font-serif text-2xl tabular-nums md:text-3xl">
+                    {value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
           <div className="flex gap-2" role="tablist" aria-label="Panorama view">
             {views.map((v, i) => (
@@ -515,6 +534,9 @@ function Stage({ view }: { view: View }) {
         </p>
         <p className="mt-1 text-xs text-white/70 sm:text-sm">
           Permanent site of the association
+        </p>
+        <p className="mt-3 inline-flex rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs tabular-nums text-white/90 backdrop-blur-md">
+          {lengthM} m × {widthM} m · about {plotArea} m²
         </p>
       </div>
 

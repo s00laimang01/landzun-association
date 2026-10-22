@@ -23,6 +23,9 @@ export const appConfigs = {
     lat: 9.084552,
     lng: 6.012161,
     appleMapsUrl: "https://maps.apple/p/x8SI7dpWsLA9L8",
+    /** Measured dimensions of the plot, in metres. */
+    lengthM: 29.87,
+    widthM: 23.77,
   },
 };
 
@@ -728,8 +731,8 @@ export const members = [
   },
   {
     id: "30",
-    name: "Abdulmumini Madami (Pele)",
-    image: "",
+    name: "Abdulmumini M. Madami",
+    image: Image.ProMadami,
     position: "P.R.O",
     activeFrom: "2016-2024",
     phoneNumber: "08078486702",

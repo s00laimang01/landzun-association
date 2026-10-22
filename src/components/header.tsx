@@ -19,14 +19,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <div className="container flex h-16 items-center justify-between gap-6">
-        <a href="#top" className="flex min-w-0 items-center gap-3">
-          <Seal className="h-9 w-9" />
+      <div className="container flex h-20 items-center justify-between gap-6 sm:h-24">
+        <a href="#top" className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <Seal className="h-16 w-16 sm:h-20 sm:w-20" />
           <span className="min-w-0">
-            <span className="line-clamp-2 font-serif text-[15px] leading-tight sm:text-lg">
+            <span className="line-clamp-2 font-serif text-lg leading-tight sm:text-2xl">
               {appConfigs.name}
             </span>
-            <span className="hidden text-[11px] uppercase tracking-[0.16em] text-muted-foreground sm:block">
+            <span className="mt-0.5 hidden text-xs uppercase tracking-[0.16em] text-muted-foreground sm:block">
               {appConfigs.town} · Est. {appConfigs.foundedYear}
             </span>
           </span>
@@ -37,7 +37,7 @@ export function Header() {
             <a
               key={link.path}
               href={link.path}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-[15px] text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.name}
             </a>

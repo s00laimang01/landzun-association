@@ -36,10 +36,12 @@ import SallahPrayer from "../assets/sallah-prayers.mp4";
 import SpecialReport from "../assets/special-report.mp4";
 import Clinic from "../assets/lada-clinic.jpg";
 import Land from "../assets/lada-plot.jpg";
+import ProMadami from "../assets/pro-abdulmumini-madami.jpg";
 import SitePanoramaWide from "../assets/site-panorama-wide.jpg";
 import SitePanoramaWall from "../assets/site-panorama-wall.jpg";
 import SingingPraise from "../assets/singing-praise.mp4";
 import PalaceReconstruction from "../assets/palace-reconstruction.mp4";
+import PalaceInside from "../assets/palace-inside.mp4";
 import LandzunRiver from "../assets/landzun-river.jpg";
 import President8 from "../assets/president-8.jpg";
 import President7 from "../assets/president-7.jpg";
@@ -116,6 +118,7 @@ export default {
   LandzunRiver,
   SingingPraise,
   PalaceReconstruction,
+  PalaceInside,
   President1,
   President2,
   President4,
@@ -146,5 +149,6 @@ export default {
     HistoryOfBida,
     NupeDayHistory,
     SitePanoramaWide,
-    SitePanoramaWall
+    SitePanoramaWall,
+    ProMadami
 };
