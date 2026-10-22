@@ -722,20 +722,20 @@ export const members = [
   },
   {
     id: "30",
+    name: "Abdulmumini M. Madami",
+    image: Image.ProMadami,
+    position: "P.R.O",
+    activeFrom: "2016-2024",
+    phoneNumber: "08078486702",
+  },
+  {
+    id: "30",
     name: "Barr. Hadiza Nura Alfa",
     image: "",
     position: "Legal Adviser",
     activeFrom: "2016-2024",
     email: "",
     phoneNumber: "",
-  },
-  {
-    id: "30",
-    name: "Abdulmumini M. Madami",
-    image: Image.ProMadami,
-    position: "P.R.O",
-    activeFrom: "2016-2024",
-    phoneNumber: "08078486702",
   },
   {
     id: "30",
