@@ -37,6 +37,7 @@ import SpecialReport from "../assets/special-report.mp4";
 import Clinic from "../assets/lada-clinic.jpg";
 import Land from "../assets/lada-plot.jpg";
 import ProMadami from "../assets/pro-abdulmumini-madami.jpg";
+import YusufRaji from "../assets/yusuf-raji.jpg";
 import SitePanoramaWide from "../assets/site-panorama-wide.jpg";
 import SitePanoramaWall from "../assets/site-panorama-wall.jpg";
 import SingingPraise from "../assets/singing-praise.mp4";
@@ -150,5 +151,6 @@ export default {
     NupeDayHistory,
     SitePanoramaWide,
     SitePanoramaWall,
-    ProMadami
+    ProMadami,
+    YusufRaji
 };

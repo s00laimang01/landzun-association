@@ -676,8 +676,7 @@ export const members = [
   {
     id: "30",
     name: "Muhammad Yusuf Raji",
-    image:
-      "https://i.ibb.co/Mk3KxbHM/Whats-App-Image-2025-08-03-at-18-29-10-149f6b9e.jpg",
+    image: Image.YusufRaji,
     position: "Asst Fin. Sec",
     activeFrom: "2016-2024",
     email: "",

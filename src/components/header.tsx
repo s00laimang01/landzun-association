@@ -23,7 +23,7 @@ export function Header() {
         <a href="#top" className="flex min-w-0 items-center gap-3 sm:gap-4">
           <Seal className="h-16 w-16 sm:h-20 sm:w-20" />
           <span className="min-w-0">
-            <span className="line-clamp-2 font-serif text-lg leading-tight sm:text-2xl">
+            <span className="line-clamp-2 font-serif text-lg leading-tight sm:text-2xl lg:text-xl xl:text-2xl">
               {appConfigs.name}
             </span>
             <span className="mt-0.5 hidden text-xs uppercase tracking-[0.16em] text-muted-foreground sm:block">
@@ -32,7 +32,7 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden shrink-0 items-center gap-5 lg:flex xl:gap-7">
           {navLinks.map((link) => (
             <a
               key={link.path}
