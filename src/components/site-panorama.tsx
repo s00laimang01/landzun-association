@@ -27,15 +27,16 @@ const views: View[] = [
   {
     label: "Across the plot",
     src: Images.SitePanoramaWide,
-    alt: "Panorama of the association's plot on Bangaie Road: open grassland with a stream running through it, a boundary wall on the left and the town beyond.",
-    arcDeg: 150,
-    pin: { x: 0.885, y: 0.62, label: "LADA plot marker" },
+    alt: "Panorama of the association's plot on Bangaie Road under a clear sky: open grassland with the LADA plot beacon in the middle, a boundary wall and gate on the left, and the town and solar street lights beyond.",
+    arcDeg: 160,
+    pin: { x: 0.522, y: 0.6, label: "LADA plot marker" },
   },
   {
-    label: "Along the wall",
-    src: Images.SitePanoramaWall,
-    alt: "The plot's boundary wall seen from inside the site, with banana trees behind it.",
-    arcDeg: 120,
+    label: "Toward the beacon",
+    src: Images.SitePanoramaBeacon,
+    alt: "A closer view across the plot to the LADA plot beacon, with the boundary wall on the left and the town on the horizon.",
+    arcDeg: 140,
+    pin: { x: 0.484, y: 0.62, label: "LADA plot marker" },
   },
 ];
 

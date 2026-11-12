@@ -19,6 +19,20 @@ const projects = [
   },
 ];
 
+// Prints from the formal launching, restored from faded scans. File names
+// set the order (launch-01.jpg first).
+const launchPhotos = Object.entries(
+  import.meta.glob<string>("../assets/launch/*.jpg", {
+    eager: true,
+    import: "default",
+  })
+)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, src]) => src);
+
+const launchNote =
+  "The formal launching of the Landzun Development Association and its ₦1m Bida Rehabilitation Appeal Fund, the association's first official fundraising, which went on to build the health clinic at Bangaie, Bida.";
+
 export default function AboutUs() {
   return (
     <div id="about" className="border-y border-border bg-brand-paper-deep/60">
@@ -82,6 +96,29 @@ export default function AboutUs() {
                   <li key={a.title} className="border-t border-border pt-4">
                     <h4 className="font-serif text-xl">{a.title}</h4>
                     <p className="prose-lada mt-2">{a.detail}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal>
+              <h3 className="eyebrow mb-3">Where it began</h3>
+              <p className="font-serif text-2xl leading-snug md:text-3xl">
+                The formal launching and appeal fund
+              </p>
+              <p className="prose-lada mt-3 max-w-2xl">
+                {launchNote} Tap a photograph to see it in full.
+              </p>
+              <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {launchPhotos.map((src, i) => (
+                  <li key={src}>
+                    <MediaExpander
+                      src={src}
+                      aspect="1/1"
+                      name={`The formal launching, photograph ${i + 1} of ${launchPhotos.length}`}
+                      note={launchNote}
+                      hideCaption
+                    />
                   </li>
                 ))}
               </ul>

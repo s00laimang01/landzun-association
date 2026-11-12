@@ -10,7 +10,17 @@ const note =
 const nupeNote =
   "A telling of where the Nupe people came from, recited at the Nupe Day and Madu Yeshi celebration.";
 
-/** Full-width feature for the History of Bida documentary, then the Nupe history recital. */
+const watchButton = (
+  <Button
+    size="lg"
+    className="bg-brand-paper text-brand-ink hover:bg-brand-paper/90"
+  >
+    <Play className="fill-current" />
+    Watch with sound
+  </Button>
+);
+
+/** The Nupe history recital, then the full-width History of Bida documentary. */
 export function History() {
   return (
     <div
@@ -18,45 +28,10 @@ export function History() {
       className="bg-brand-ink text-brand-paper [&_.prose-lada]:text-brand-paper/70"
     >
       <Section className="py-20 md:py-28">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Heritage"
-            title="The history of Bida"
-            lede={
-              <>
-                {note} It plays silently as you scroll; open it to watch with
-                sound.
-              </>
-            }
-          />
-        </Reveal>
-
-        <Reveal className="mt-10 md:mt-14">
-          <MediaExpander
-            src={Image.HistoryOfBida}
-            type="vid"
-            name="The History of Bida"
-            note={note}
-            aspect="16/9"
-            hideCaption
-            className="mx-auto max-w-5xl"
-            action={
-              <Button
-                size="lg"
-                className="bg-brand-paper text-brand-ink hover:bg-brand-paper/90"
-              >
-                <Play className="fill-current" />
-                Watch with sound
-              </Button>
-            }
-          />
-        </Reveal>
-
-        <div className="mt-20 grid items-center gap-10 border-t border-brand-paper/15 pt-20 md:mt-28 md:grid-cols-[1fr_minmax(0,26rem)] md:gap-16 md:pt-28">
+        <div className="grid items-center gap-10 md:grid-cols-[1fr_minmax(0,26rem)] md:gap-16">
           <Reveal>
             <SectionHeading
-              as="h3"
-              eyebrow="Nupe Day & Madu Yeshi"
+              eyebrow="Heritage"
               title="The history of the Nupe people"
               lede={<>{nupeNote} Open it to watch with sound.</>}
             />
@@ -70,15 +45,36 @@ export function History() {
               note={nupeNote}
               aspect="1/1"
               hideCaption
-              action={
-                <Button
-                  size="lg"
-                  className="bg-brand-paper text-brand-ink hover:bg-brand-paper/90"
-                >
-                  <Play className="fill-current" />
-                  Watch with sound
-                </Button>
+              action={watchButton}
+            />
+          </Reveal>
+        </div>
+
+        <div className="mt-20 border-t border-brand-paper/15 pt-20 md:mt-28 md:pt-28">
+          <Reveal>
+            <SectionHeading
+              as="h3"
+              eyebrow="Documentary"
+              title="The history of Bida"
+              lede={
+                <>
+                  {note} It plays silently as you scroll; open it to watch
+                  with sound.
+                </>
               }
+            />
+          </Reveal>
+
+          <Reveal className="mt-10 md:mt-14">
+            <MediaExpander
+              src={Image.HistoryOfBida}
+              type="vid"
+              name="The History of Bida"
+              note={note}
+              aspect="16/9"
+              hideCaption
+              className="mx-auto max-w-5xl"
+              action={watchButton}
             />
           </Reveal>
         </div>

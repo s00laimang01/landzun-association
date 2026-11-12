@@ -20,9 +20,10 @@ export const appConfigs = {
   permanentSite: "Bangaie Road, Bida",
   /** Location of the permanent site (from the association's Apple Maps pin). */
   site: {
-    lat: 9.084552,
-    lng: 6.012161,
-    appleMapsUrl: "https://maps.apple/p/x8SI7dpWsLA9L8",
+    lat: 9.085092,
+    lng: 6.019141,
+    appleMapsUrl:
+      "https://maps.apple.com/place?coordinate=9.085092,6.019141&name=LADA%20plot&map=h",
     /** Measured dimensions of the plot, in metres. */
     lengthM: 29.87,
     widthM: 23.77,
