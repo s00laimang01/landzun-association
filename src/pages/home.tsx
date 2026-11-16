@@ -16,9 +16,9 @@ export default function Home() {
       <main>
         <Hero />
         <History />
+        <Patrons />
         <AboutUs />
         <SiteMap />
-        <Patrons />
         <MembersSection />
         <Gallery />
         <EventBanner />
