@@ -183,6 +183,11 @@ const secondPatron: MediaItem[] = [
 
 const culture: MediaItem[] = [
   {
+    src: Image.NupeCulturalDress,
+    note: "The traditional dress of a Nupe woman.",
+    imgClassName: "object-top",
+  },
+  {
     src: Image.NupeCulture,
     type: "vid",
     poster: "https://i.ibb.co/WzGj9gd/Screenshot-2-11-2024-175040-localhost.jpg",

@@ -16,6 +16,8 @@ export type MediaItem = {
   name?: string;
   note?: string | ReactNode;
   poster?: string;
+  /** Extra classes for the thumbnail image, e.g. "object-top". */
+  imgClassName?: string;
 };
 
 /**
@@ -28,8 +30,6 @@ export const MediaExpander: FC<
     /** Aspect ratio of the thumbnail box, e.g. "4/3". */
     aspect?: string;
     className?: string;
-    /** Extra classes for the thumbnail image, e.g. "object-top". */
-    imgClassName?: string;
     /** Keep the caption for the dialog only (when the page already shows it). */
     hideCaption?: boolean;
     /** An extra opener rendered under the figure, e.g. a "Watch" button. */

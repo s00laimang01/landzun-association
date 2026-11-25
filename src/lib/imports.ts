@@ -74,6 +74,7 @@ import GovernorBago2 from "../assets/governor-bago-2.jpg";
 import FormerGovernorGroup from "../assets/former-governor-group.jpg";
 import HistoryOfBida from "../assets/history-of-bida.mp4";
 import NupeDayHistory from "../assets/nupe-day-history.mp4";
+import NupeCulturalDress from "../assets/nupe-cultural-dress.jpg";
 
 
 
@@ -149,6 +150,7 @@ export default {
     FormerGovernorGroup,
     HistoryOfBida,
     NupeDayHistory,
+    NupeCulturalDress,
     SitePanoramaWide,
     SitePanoramaBeacon,
     ProMadami,
